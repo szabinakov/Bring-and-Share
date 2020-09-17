@@ -6,7 +6,7 @@ import CreateEvent from "./CreateEvent";
 function App() {
   return (
     <div className="App">
-      <p>Hello World!</p>
+      <h1>Bring & Share</h1>
       <CreateEvent />
     </div>
   );

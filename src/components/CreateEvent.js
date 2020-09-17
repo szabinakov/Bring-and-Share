@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import axios from "axios";
 import "../styles/CreateEvent.css";
 
 const CreateEvent = () => {
@@ -16,7 +17,25 @@ const CreateEvent = () => {
 
   const handleCreateEvent = (e) => {
     e.preventDefault();
-    console.log(fields);
+
+    axios
+      .post("https://final-mcrcodes-project.herokuapp.com/events", fields)
+      .then((response) => {
+        // setAlert({
+        //   message: "Property Added",
+        //   isSuccess: true,
+        // });
+        console.log(response);
+      })
+      .catch((error) => {
+        // setAlert({
+        //   message: "Server error. Please try again later.",
+        //   isSuccess: false,
+        // });
+        console.log(error);
+      });
+
+    // console.log(fields);
   };
   const handleFieldChange = (e) => {
     setFields({ ...fields, [e.target.name]: e.target.value });
