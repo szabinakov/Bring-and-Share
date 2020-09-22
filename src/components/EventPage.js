@@ -1,5 +1,6 @@
 // list of things to import
 import React from "react";
+import AddParticipant from "./AddParticipant";
 // import AddParticipant from "./AddParticipant";
 // render
 // event details
@@ -14,6 +15,7 @@ const EventPage = (props) => {
         <h3>Event details</h3>
         <p>Event ID: {props.eventId}</p>
       </div>
+      <AddParticipant />
     </div>
   );
 };
