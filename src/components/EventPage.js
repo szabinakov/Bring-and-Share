@@ -7,6 +7,8 @@ import AddParticipant from "./AddParticipant";
 // participant + form mapped out
 // add participant form
 const EventPage = (props) => {
+
+
   return (
     <div>
       <h2>Here is your amazing page</h2>
@@ -15,7 +17,7 @@ const EventPage = (props) => {
         <h3>Event details</h3>
         <p>Event ID: {props.eventId}</p>
       </div>
-      <AddParticipant />
+      <AddParticipant  />
     </div>
   );
 };

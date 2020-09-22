@@ -9,6 +9,7 @@ function App() {
   return (
     <div className="App">
       <h1>Bring & Share</h1>
+      
       <Switch>
         <Route exact path="/" component={CreateEvent} />
         <Route exact path="/events/:eventId" component={EventPage} />

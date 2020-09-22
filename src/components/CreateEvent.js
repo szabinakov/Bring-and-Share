@@ -21,26 +21,22 @@ const CreateEvent = () => {
   const [fields, setFields] = useState(initialState.fields);
   const [alert, setAlert] = useState(initialState.alert);
 
+
+
+
   const handleCreateEvent = (e) => {
     e.preventDefault();
     setAlert({ message: "", isSuccess: false });
-
+    
+    const successAlertMessage = (url) => (
+      <div>Click <a href={url}>here</a> to see your event!</div>
+    )
     axios
       .post("https://final-mcrcodes-project.herokuapp.com/events", fields)
       .then((response) => {
-        // the below RegEx removes all special characters, including space. Only leaves alphabets & numbers
-        // but this only works for roman alphabets and numerals...
-        // I tried crating an event in Japanese characters and it didn't quite work...
-        const eventNameNoSpace = response.data.eventName.replace(
-          /[^a-zA-Z0-9]/g,
-          ""
-        );
-        const hostNameNoSpace = response.data.hostName.replace(
-          /[^a-zA-Z0-9]/g,
-          ""
-        );
+       
         setAlert({
-          message: `Your event page URL is /events/${response.data.id}-${eventNameNoSpace}-${hostNameNoSpace}`,
+          message: successAlertMessage(`/events/${response.data.id}`),
           isSuccess: true,
         });
       })
