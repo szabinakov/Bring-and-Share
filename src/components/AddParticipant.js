@@ -9,6 +9,7 @@ const AddParticipant = () => {
       toBring: "",
       dislikes: "",
       dietInfo: "",
+      eventID: '',
     },
   };
 
@@ -31,7 +32,8 @@ const AddParticipant = () => {
   const handleFieldChange = (e) => {
     setFields({ ...fields, [e.target.name]: e.target.value });
   };
-
+  
+  console.log(fields)
   return (
     <div className="addParticipant">
       <h2>Add your participants</h2>
@@ -39,14 +41,14 @@ const AddParticipant = () => {
 
       {/* form starts */}
       <form onSubmit={handleAddPerson}>
-        <div className="participantName">
-          <label htmlFor="participantName">
+        <div className="name">
+          <label htmlFor="name">
             Name <br />
             <input
               type="text"
-              id="participantName"
-              name="participantName"
-              value={fields.participantName}
+              id="name"
+              name="name"
+              value={fields.name}
               onChange={handleFieldChange}
               placeholder="Name of fellow Party Queen..."
             />
