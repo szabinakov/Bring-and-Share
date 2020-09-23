@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Switch, Route } from "react-router-dom";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 import "../styles/App.css";
 import axios from "axios";
 
@@ -27,7 +27,7 @@ function App() {
   return (
     <div className="App">
       <h1>Bring & Share</h1>
-
+      <BrowserRouter>
       <Switch>
         <Route exact path="/" component={CreateEvent} />
         {eventId.map((eachId) => (
@@ -38,6 +38,7 @@ function App() {
           />
         ))}
       </Switch>
+      </BrowserRouter>
     </div>
   );
 }

@@ -1,0 +1,100 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AddParticipant component renders correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="addParticipant"
+  >
+    <h2>
+      Add your participants
+    </h2>
+    <p>
+      Fill in all fields and click "create event"
+    </p>
+    <form>
+      <div
+        class="name"
+      >
+        <label
+          for="name"
+        >
+          Name 
+          <br />
+          <input
+            data-testid="name"
+            id="name"
+            name="name"
+            placeholder="Name of fellow Party Queen..."
+            type="text"
+            value=""
+          />
+        </label>
+      </div>
+      <div
+        class="toBring"
+      >
+        <label
+          for="toBring"
+        >
+          I am bringing... 
+          <br />
+          <input
+            data-testid="toBring"
+            id="toBring"
+            name="toBring"
+            placeholder="Ferrero Rocher"
+            type="text"
+            value=""
+          />
+        </label>
+      </div>
+      <div
+        class="dislikes"
+      >
+        <label
+          for="dislikes"
+        >
+          I don't like... 
+          <br />
+          <input
+            data-testid="dislikes"
+            id="dislikes"
+            name="dislikes"
+            type="text"
+            value=""
+          />
+        </label>
+      </div>
+      <div
+        class="dietInfo"
+      >
+        <label
+          for="dietInfo"
+        >
+          Diet info 
+          <br />
+          <input
+            data-testid="dietInfo"
+            id="dietInfo"
+            name="dietInfo"
+            placeholder="Vegetarian? Kosher? Coeliac?"
+            type="text"
+            value=""
+          />
+        </label>
+      </div>
+      <div
+        class="createEventButton"
+      >
+        <button
+          class="addButton"
+          data-testid="addButton"
+          type="submit"
+        >
+          Add
+        </button>
+      </div>
+    </form>
+  </div>
+</DocumentFragment>
+`;
