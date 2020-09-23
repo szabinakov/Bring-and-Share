@@ -11,7 +11,6 @@ const EventPage = ({ eventId }) => {
   const [eventDate, setEventDate] = useState("");
   const [eventTime, setEventTime] = useState("");
   const [eventAddress, setEventAddress] = useState("");
-  const [participants, setParticipants] = useState([]);
  
  
   useEffect(() => {
@@ -25,7 +24,6 @@ const EventPage = ({ eventId }) => {
           setEventDate(response.data.eventDate);
           setEventTime(response.data.eventTime);
           setEventAddress(response.data.address);
-          setParticipants(response.data.participants);
         })
         .catch((error) => {
           console.log(error);
@@ -36,7 +34,7 @@ const EventPage = ({ eventId }) => {
   }, );
 
   return (
-    <div>
+    <div data-testid='eventdetails'>
       <h2>Here is your amazing page</h2>
       <p>Have fun at your event!</p>
       <div className="eventDetails">
@@ -50,6 +48,7 @@ const EventPage = ({ eventId }) => {
       </div>
       <Participants eventId={eventId}/>
       <AddParticipant eventId={eventId} />
+
     </div>
   );
 };
