@@ -11,21 +11,17 @@ const EventPage = ({ eventId }) => {
   const [eventDate, setEventDate] = useState("");
   const [eventTime, setEventTime] = useState("");
   const [eventAddress, setEventAddress] = useState("");
-  const [participants, setParticipants] = useState([]);
- 
- 
+
   useEffect(() => {
     async function fetchData() {
       await axios
         .get(`https://final-mcrcodes-project.herokuapp.com/events/${eventId}`)
         .then((response) => {
-
           setEventName(response.data.eventName);
           setHostName(response.data.hostName);
-          setEventDate(response.data.eventDate);
-          setEventTime(response.data.eventTime);
+          setEventDate(response.data.date);
+          setEventTime(response.data.time);
           setEventAddress(response.data.address);
-          setParticipants(response.data.participants);
         })
         .catch((error) => {
           console.log(error);
@@ -33,7 +29,7 @@ const EventPage = ({ eventId }) => {
     }
 
     fetchData();
-  }, );
+  });
 
   return (
     <div>
@@ -48,7 +44,7 @@ const EventPage = ({ eventId }) => {
         <p>Event Time: {eventTime}</p>
         <p>Event Address: {eventAddress}</p>
       </div>
-      <Participants eventId={eventId}/>
+      <Participants eventId={eventId} />
       <AddParticipant eventId={eventId} />
     </div>
   );
