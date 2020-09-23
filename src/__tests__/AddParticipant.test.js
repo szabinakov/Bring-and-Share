@@ -11,7 +11,7 @@ describe('AddParticipant component', () => {
 
         const {asFragment} = render (<AddParticipant eventId={mockId}/>)
 
-        expect(asFragment).toMatchSnapshot()
+        expect(asFragment()).toMatchSnapshot()
     })
 
     it('renders the correct form elements', () => {
