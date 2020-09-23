@@ -1,18 +1,42 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Switch, Route } from "react-router-dom";
 import "../styles/App.css";
+import axios from "axios";
 
 import CreateEvent from "./CreateEvent";
 import EventPage from "./EventPage";
 
 function App() {
+  const [eventId, setEventId] = useState([]);
+
+  useEffect(() => {
+    async function fetchData() {
+      await axios
+        .get(`https://final-mcrcodes-project.herokuapp.com/events`)
+        .then((response) => {
+          setEventId(response.data.map((e) => e.id));
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    }
+
+    fetchData();
+  }, []);
+
   return (
     <div className="App">
       <h1>Bring & Share</h1>
-      
+
       <Switch>
         <Route exact path="/" component={CreateEvent} />
-        <Route exact path="/events/:eventId" component={EventPage} />
+        {eventId.map((eachId) => (
+          <Route
+            exact
+            path={`/events/${eachId}`}
+            render={(props) => <EventPage {...props} eventId={eachId} />}
+          />
+        ))}
       </Switch>
     </div>
   );
