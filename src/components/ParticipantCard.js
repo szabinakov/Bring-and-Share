@@ -5,19 +5,19 @@ const ParticipantCard = ({id, name, toBring, dislikes, dietInfo, removeParticipa
     return(
         <>
             <div className="eachParticipant">
-                <div className="participantName">
+                <div data-testid="name" className="participantName">
                     {name}
                 </div>
-                <div className="participantName">
+                <div data-testid="toBring" className="participantBrings">
                     Brings: {toBring}
                 </div>
-                <div className="participantDislikes">
+                <div data-testid="dislikes" className="participantDislikes">
                     Does not like: {dislikes}
                 </div >
-                <div className="participantDietInfo">
+                <div data-testid="dietInfo" className="participantDietInfo">
                     Any other Diet information: {dietInfo}
                 </div>
-                <button className="participantDelete" onClick={()=>removeParticipant(id)}>Delete</button>
+                <button data-testid="removeButton" className="participantDelete" onClick={()=>removeParticipant(id)}>Delete</button>
             </div>
 
         </>
