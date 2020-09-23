@@ -45,6 +45,7 @@ const AddParticipant = ({ eventId }) => {
               type="text"
               id="name"
               name="name"
+              data-testid="name"
               value={fields.name}
               onChange={handleFieldChange}
               placeholder="Name of fellow Party Queen..."
@@ -59,6 +60,7 @@ const AddParticipant = ({ eventId }) => {
               type="text"
               id="toBring"
               name="toBring"
+              data-testid="toBring"
               value={fields.toBring}
               onChange={handleFieldChange}
               placeholder="Ferrero Rocher"
@@ -73,6 +75,7 @@ const AddParticipant = ({ eventId }) => {
               type="text"
               id="dislikes"
               name="dislikes"
+              data-testid="dislikes"
               value={fields.dislikes}
               onChange={handleFieldChange}
             />
@@ -86,6 +89,7 @@ const AddParticipant = ({ eventId }) => {
               type="text"
               id="dietInfo"
               name="dietInfo"
+              data-testid="dietInfo"
               value={fields.dietInfo}
               onChange={handleFieldChange}
               placeholder="Vegetarian? Kosher? Coeliac?"
@@ -94,7 +98,7 @@ const AddParticipant = ({ eventId }) => {
         </div>
 
         <div className="createEventButton">
-          <button className="addButton" type="submit">
+          <button data-testid='addButton' className="addButton" type="submit">
             Add
           </button>
         </div>
