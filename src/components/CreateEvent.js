@@ -65,6 +65,7 @@ const CreateEvent = () => {
             <input
               type="text"
               id="eventName"
+              data-testid="eventName"
               name="eventName"
               value={fields.eventName}
               onChange={handleFieldChange}
@@ -80,6 +81,7 @@ const CreateEvent = () => {
               type="text"
               id="hostName"
               name="hostName"
+              data-testid="hostName"
               value={fields.hostName}
               onChange={handleFieldChange}
               placeholder="Nigella Lawson"
@@ -93,6 +95,7 @@ const CreateEvent = () => {
             <input
               type="date"
               id="date"
+              data-testid="date"
               name="date"
               value={fields.date}
               onChange={handleFieldChange}
@@ -106,6 +109,7 @@ const CreateEvent = () => {
             <input
               type="time"
               id="time"
+              data-testid="time"
               name="time"
               value={fields.time}
               onChange={handleFieldChange}
@@ -120,6 +124,7 @@ const CreateEvent = () => {
               type="text"
               id="address"
               name="address"
+              data-testid="address"
               value={fields.address}
               onChange={handleFieldChange}
               placeholder="Mi casa"
@@ -128,7 +133,7 @@ const CreateEvent = () => {
         </div>
 
         <div className="createEventButton">
-          <button className="submitButton" type="submit">
+          <button data-testid="submitButton" className="submitButton" type="submit">
             Create event
           </button>
         </div>
