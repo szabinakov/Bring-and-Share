@@ -1,9 +1,9 @@
 import React from "react";
-import '../styles/ParticipantCard.css'
+import "../styles/ParticipantCard.css";
 
 const ParticipantCard = ({id, name, toBring, dislikes, dietInfo, removeParticipant}) => {
-    return(
-        <>
+  return (
+    <>
             <div className="eachParticipant">
                 <div data-testid="name" className="participantName">
                     {name}
@@ -19,9 +19,8 @@ const ParticipantCard = ({id, name, toBring, dislikes, dietInfo, removeParticipa
                 </div>
                 <button data-testid="removeButton" className="participantDelete" onClick={()=>removeParticipant(id)}>Delete</button>
             </div>
+    </>
+  );
+};
 
-        </>
-    )
-}
-
-export default ParticipantCard
+export default ParticipantCard;

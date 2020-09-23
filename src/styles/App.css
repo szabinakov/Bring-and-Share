@@ -1,3 +1,78 @@
 body {
   background-color: papayawhip;
 }
+
+.App {
+  width: 100%;
+}
+
+.appTitle {
+  text-align: center;
+  color: orange;
+}
+
+.bunting {
+  overflow: hidden;
+  white-space: nowrap;
+  /* display: block; */
+  width: 93%;
+  height: 25px;
+  border-top: 3px solid rgb(131, 65, 34);
+  background-color: palegreen;
+}
+
+.down_triangle {
+  display: inline-block;
+  width: 0px;
+  height: 25px;
+  margin: 0 3px;
+  border-style: solid;
+  border-width: 25px 15px 0px 15px;
+  border-color: transparent;
+  background-color: transparent;
+}
+
+.down_triangle:nth-of-type(n + 1) {
+  border-top-color: rgb(255, 102, 237);
+}
+.down_triangle:nth-of-type(2n + 1) {
+  border-top-color: rgb(0, 255, 208);
+}
+.down_triangle:nth-of-type(3n + 2) {
+  border-top-color: rgb(252, 191, 111);
+}
+
+/*media query start*/
+@media screen and (min-width: 410px) {
+  .bunting {
+    height: 50px;
+  }
+  .down_triangle {
+    height: 50px;
+    margin: 0 3px;
+    border-width: 50px 30px 0px 30px;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .bunting {
+    height: 100px;
+  }
+  .down_triangle {
+    width: 0px;
+    height: 100px;
+    margin: 0 15px;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .bunting {
+    height: 100px;
+  }
+  .down_triangle {
+    width: 0px;
+    height: 100px;
+    margin: 0 15px;
+  }
+}
+/*media query end*/
