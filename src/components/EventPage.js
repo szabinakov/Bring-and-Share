@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import AddParticipant from "./AddParticipant";
 import "../styles/EventPage.css";
 import axios from "axios";
+import Participants from "./Participants";
 
 const EventPage = ({ eventId }) => {
   const [eventName, setEventName] = useState("");
@@ -11,13 +12,14 @@ const EventPage = ({ eventId }) => {
   const [eventTime, setEventTime] = useState("");
   const [eventAddress, setEventAddress] = useState("");
   const [participants, setParticipants] = useState([]);
-
+ 
+ 
   useEffect(() => {
     async function fetchData() {
       await axios
         .get(`https://final-mcrcodes-project.herokuapp.com/events/${eventId}`)
         .then((response) => {
-          console.log(response.data);
+
           setEventName(response.data.eventName);
           setHostName(response.data.hostName);
           setEventDate(response.data.eventDate);
@@ -31,7 +33,7 @@ const EventPage = ({ eventId }) => {
     }
 
     fetchData();
-  }, []);
+  }, );
 
   return (
     <div>
@@ -46,7 +48,8 @@ const EventPage = ({ eventId }) => {
         <p>Event Time: {eventTime}</p>
         <p>Event Address: {eventAddress}</p>
       </div>
-      <AddParticipant />
+      <Participants eventId={eventId}/>
+      <AddParticipant eventId={eventId} />
     </div>
   );
 };

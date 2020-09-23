@@ -2,14 +2,14 @@ import React, { useState } from "react";
 import axios from "axios";
 import "../styles/AddParticipant.css";
 
-const AddParticipant = () => {
+const AddParticipant = ({ eventId }) => {
   const initialState = {
     fields: {
       name: "",
       toBring: "",
       dislikes: "",
       dietInfo: "",
-      eventID: '',
+      eventID: eventId,
     },
   };
 
@@ -21,10 +21,7 @@ const AddParticipant = () => {
     axios
 
       // /events/:eventId/participants
-      .post("https://final-mcrcodes-project.herokuapp.com/events", fields)
-      .then((response) => {
-        console.log(response);
-      })
+      .post(`https://final-mcrcodes-project.herokuapp.com/events/${eventId}/participants`, fields)
       .catch((error) => {
         console.log(error);
       });
@@ -32,8 +29,8 @@ const AddParticipant = () => {
   const handleFieldChange = (e) => {
     setFields({ ...fields, [e.target.name]: e.target.value });
   };
+
   
-  console.log(fields)
   return (
     <div className="addParticipant">
       <h2>Add your participants</h2>
