@@ -33,6 +33,7 @@ const CreateEvent = () => {
     axios
       .post("https://final-mcrcodes-project.herokuapp.com/events", fields)
       .then((response) => {
+        console.log(response)
         setAlert({
           message: successAlertMessage(`/events/${response.data.id}`),
           isSuccess: true,
