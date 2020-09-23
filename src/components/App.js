@@ -26,7 +26,22 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Bring & Share</h1>
+      <ul className="bunting">
+        <li className="down_triangle"></li>
+        <li className="down_triangle"></li>
+        <li className="down_triangle"></li>
+        <li className="down_triangle"></li>
+        <li className="down_triangle"></li>
+        <li className="down_triangle"></li>
+        <li className="down_triangle"></li>
+        {/* <li className="down_triangle"></li>
+        <li className="down_triangle"></li>
+        <li className="down_triangle"></li>
+        <li className="down_triangle"></li>
+        <li className="down_triangle"></li>
+        <li className="down_triangle"></li> */}
+      </ul>
+      <h1 className="appTitle">Bring & Share</h1>
 
       <Switch>
         <Route exact path="/" component={CreateEvent} />
