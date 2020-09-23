@@ -21,20 +21,18 @@ const CreateEvent = () => {
   const [fields, setFields] = useState(initialState.fields);
   const [alert, setAlert] = useState(initialState.alert);
 
-
-
-
   const handleCreateEvent = (e) => {
     e.preventDefault();
     setAlert({ message: "", isSuccess: false });
-    
+
     const successAlertMessage = (url) => (
-      <div>Click <a href={url}>here</a> to see your event!</div>
-    )
+      <div>
+        Click <a href={url}>here</a> to see your event!
+      </div>
+    );
     axios
       .post("https://final-mcrcodes-project.herokuapp.com/events", fields)
       .then((response) => {
-       
         setAlert({
           message: successAlertMessage(`/events/${response.data.id}`),
           isSuccess: true,
