@@ -40,19 +40,29 @@ function App() {
         <li className="down_triangle"></li>
         <li className="down_triangle"></li>
         <li className="down_triangle"></li>
+        <li className="down_triangle"></li>
+        <li className="down_triangle"></li>
+        <li className="down_triangle"></li>
+        <li className="down_triangle"></li>
+        <li className="down_triangle"></li>
+        <li className="down_triangle"></li>
+        <li className="down_triangle"></li>
+        <li className="down_triangle"></li>
+        <li className="down_triangle"></li>
+        <li className="down_triangle"></li>
       </ul>
       <h1 className="appTitle">Bring & Share</h1>
       <BrowserRouter>
-      <Switch>
-        <Route exact path="/" component={CreateEvent} />
-        {eventId.map((eachId) => (
-          <Route
-            exact
-            path={`/events/${eachId}`}
-            render={(props) => <EventPage {...props} eventId={eachId} />}
-          />
-        ))}
-      </Switch>
+        <Switch>
+          <Route exact path="/" component={CreateEvent} />
+          {eventId.map((eachId) => (
+            <Route
+              exact
+              path={`/events/${eachId}`}
+              render={(props) => <EventPage {...props} eventId={eachId} />}
+            />
+          ))}
+        </Switch>
       </BrowserRouter>
     </div>
   );
