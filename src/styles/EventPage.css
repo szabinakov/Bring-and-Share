@@ -1,3 +1,18 @@
+.eventPage {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.eventPageTitle,
+.eventPageDescription {
+  width: 100%;
+  border: 5px solid red;
+  text-align: center;
+}
+
 .eventDetails {
   border: 5px solid yellow;
+  min-width: 250px;
 }

@@ -1,0 +1,19 @@
+.Alert {
+  border-radius: 15px;
+  width: 250px;
+  height: 40px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.Alert.alert-success {
+  color: rgb(255, 0, 183);
+}
+
+.Alert.alert-error {
+  color: red;
+}

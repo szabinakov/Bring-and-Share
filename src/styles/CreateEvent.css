@@ -2,12 +2,18 @@
 
 .createEvent {
   background-color: papayawhip;
-  border: 5px solid red;
   font-family: "Roboto", sans-serif;
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
+  margin: 0px;
+  /* border: 5px solid red; */
+}
+
+.createEventTitle {
+  /* border: 5px solid red; */
+  margin: 10px;
 }
 
 .eventName,
@@ -20,7 +26,6 @@
   padding: 5px;
   margin-left: auto;
   margin-right: auto;
-  border: 5px solid green;
   font-weight: 700;
   font-size: 16px;
   color: rgb(201, 105, 2);
@@ -37,6 +42,7 @@
 }
 
 .submitButton {
+  margin-bottom: 10px;
   padding: 10px;
   border-radius: 10px;
   color: rgb(4, 4, 4);
