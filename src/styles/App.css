@@ -9,16 +9,17 @@ body {
 .appTitle {
   text-align: center;
   color: orange;
+  /* background-color: palegreen; */
+  margin: 0px;
 }
 
 .bunting {
   overflow: hidden;
   white-space: nowrap;
-  /* display: block; */
+  display: block;
   width: 93%;
   height: 25px;
   border-top: 3px solid rgb(131, 65, 34);
-  background-color: palegreen;
 }
 
 .down_triangle {
@@ -49,19 +50,19 @@ body {
   }
   .down_triangle {
     height: 50px;
-    margin: 0 3px;
+    margin: 0 5px;
     border-width: 50px 30px 0px 30px;
   }
 }
 
 @media screen and (min-width: 500px) {
   .bunting {
-    height: 100px;
+    height: 75px;
   }
   .down_triangle {
-    width: 0px;
-    height: 100px;
-    margin: 0 15px;
+    height: 75px;
+    margin: 0 8px;
+    border-width: 75px 45px 0px 45px;
   }
 }
 
@@ -70,9 +71,9 @@ body {
     height: 100px;
   }
   .down_triangle {
-    width: 0px;
     height: 100px;
-    margin: 0 15px;
+    margin: 0 10px;
+    border-width: 100px 60px 0px 60px;
   }
 }
 /*media query end*/

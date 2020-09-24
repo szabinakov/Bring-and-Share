@@ -34,12 +34,12 @@ function App() {
         <li className="down_triangle"></li>
         <li className="down_triangle"></li>
         <li className="down_triangle"></li>
-        {/* <li className="down_triangle"></li>
         <li className="down_triangle"></li>
         <li className="down_triangle"></li>
         <li className="down_triangle"></li>
         <li className="down_triangle"></li>
-        <li className="down_triangle"></li> */}
+        <li className="down_triangle"></li>
+        <li className="down_triangle"></li>
       </ul>
       <h1 className="appTitle">Bring & Share</h1>
 

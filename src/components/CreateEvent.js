@@ -54,7 +54,7 @@ const CreateEvent = () => {
 
   return (
     <div className="createEvent">
-      <h2>Create your event</h2>
+      <h2 className="createEventTitle">Create your event</h2>
       <p>Fill in all fields and click "create event"</p>
 
       {/* form starts */}
