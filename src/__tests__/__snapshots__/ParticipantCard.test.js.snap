@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ParticipantCard component matches the snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="eachParticipant"
+  >
+    <div
+      class="participantName"
+      data-testid="name"
+    >
+      MyName
+    </div>
+    <div
+      class="participantBrings"
+      data-testid="toBring"
+    >
+      Brings: IAmBringing
+    </div>
+    <div
+      class="participantDislikes"
+      data-testid="dislikes"
+    >
+      Does not like: MyDislikes
+    </div>
+    <div
+      class="participantDietInfo"
+      data-testid="dietInfo"
+    >
+      Any other Diet information: MyDietInfo
+    </div>
+    <button
+      class="participantDelete"
+      data-testid="removeButton"
+    >
+      Delete
+    </button>
+  </div>
+</DocumentFragment>
+`;

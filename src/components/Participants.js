@@ -18,7 +18,7 @@ const Participants = ({eventId}) => {
         .catch((err) => console.log(err))
     }
     return(
-        <div className='participants'>  
+        <div data-testid='participants' className='participants'>  
         {participants.map((person, index) => 
             <ParticipantCard
                 key={index}

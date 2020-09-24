@@ -1,0 +1,120 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CreateEvent component renders correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="createEvent"
+  >
+    <h2>
+      Create your event
+    </h2>
+    <p>
+      Fill in all fields and click "create event"
+    </p>
+    <form>
+      <div
+        class="eventName"
+      >
+        <label
+          for="eventName"
+        >
+          Event Name 
+          <br />
+          <input
+            data-testid="eventName"
+            id="eventName"
+            name="eventName"
+            placeholder="My special event"
+            type="text"
+            value=""
+          />
+        </label>
+      </div>
+      <div
+        class="hostName"
+      >
+        <label
+          for="hostName"
+        >
+          Host Name 
+          <br />
+          <input
+            data-testid="hostName"
+            id="hostName"
+            name="hostName"
+            placeholder="Nigella Lawson"
+            type="text"
+            value=""
+          />
+        </label>
+      </div>
+      <div
+        class="date"
+      >
+        <label
+          for="date"
+        >
+          Date 
+          <br />
+          <input
+            data-testid="date"
+            id="date"
+            name="date"
+            type="date"
+            value=""
+          />
+        </label>
+      </div>
+      <div
+        class="time"
+      >
+        <label
+          for="time"
+        >
+          Time 
+          <br />
+          <input
+            data-testid="time"
+            id="time"
+            name="time"
+            type="time"
+            value=""
+          />
+        </label>
+      </div>
+      <div
+        class="address"
+      >
+        <label
+          for="address"
+        >
+          Address 
+          <br />
+          <input
+            data-testid="address"
+            id="address"
+            name="address"
+            placeholder="Mi casa"
+            type="text"
+            value=""
+          />
+        </label>
+      </div>
+      <div
+        class="createEventButton"
+      >
+        <button
+          class="submitButton"
+          data-testid="submitButton"
+          type="submit"
+        >
+          Create event
+        </button>
+      </div>
+      <div
+        class="Alert alert-error"
+      />
+    </form>
+  </div>
+</DocumentFragment>
+`;

@@ -32,7 +32,7 @@ const EventPage = ({ eventId }) => {
   });
 
   return (
-    <div className="eventPage">
+    <div className="eventPage" data-testid='eventdetails'>
       <h2 className="eventPageTitle">Here is your amazing page</h2>
       <h3 className="eventPageDescription">Have fun at your event!</h3>
       <div className="eventDetails">
