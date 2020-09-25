@@ -21,7 +21,10 @@ const AddParticipant = ({ eventId }) => {
     axios
 
       // /events/:eventId/participants
-      .post(`https://final-mcrcodes-project.herokuapp.com/events/${eventId}/participants`, fields)
+      .post(
+        `https://final-mcrcodes-project.herokuapp.com/events/${eventId}/participants`,
+        fields
+      )
       .catch((error) => {
         console.log(error);
       });
@@ -30,7 +33,6 @@ const AddParticipant = ({ eventId }) => {
     setFields({ ...fields, [e.target.name]: e.target.value });
   };
 
-  
   return (
     <div className="addParticipant">
       <h2>Add your participants</h2>
@@ -97,8 +99,8 @@ const AddParticipant = ({ eventId }) => {
           </label>
         </div>
 
-        <div className="createEventButton">
-          <button data-testid='addButton' className="addButton" type="submit">
+        <div className="addParticipantButton">
+          <button data-testid="addButton" className="addButton" type="submit">
             Add
           </button>
         </div>

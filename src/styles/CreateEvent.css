@@ -8,12 +8,24 @@
   justify-content: center;
   text-align: center;
   margin: 0px;
-  /* border: 5px solid red; */
+  /* border: 5px solid green; */
 }
 
 .createEventTitle {
   /* border: 5px solid red; */
   margin: 10px;
+  font-size: 25px;
+  color: rgb(255, 89, 0);
+}
+
+.createEventInstruction {
+  /* border: 5px solid purple; */
+  margin: 8px;
+  font-size: 20px;
+}
+
+.createEventForm {
+  /* background-color: royalblue; */
 }
 
 .eventName,
@@ -29,6 +41,7 @@
   font-weight: 700;
   font-size: 16px;
   color: rgb(201, 105, 2);
+  /* border: 5px solid red; */
 }
 
 #eventName,
@@ -59,22 +72,41 @@
 }
 
 @media screen and (min-width: 800px) {
+  .createEventForm {
+    width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
   .eventName,
   .hostName,
   .date,
-  .time,
-  .address,
-  .createEventButton {
-    width: 300px;
+  .time {
+    width: 280px;
     padding: 10px;
     font-size: 20px;
   }
+  .address,
+  .createEventButton {
+    width: 400px;
+    padding: 10px;
+    font-size: 20px;
+  }
+
   #eventName,
   #hostName,
   #date,
-  #time,
+  #time {
+    height: 27px;
+    width: 200px;
+  }
   #address {
     height: 27px;
+    width: 260px;
   }
 }
 /*media query end*/
