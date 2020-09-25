@@ -33,7 +33,7 @@ const CreateEvent = () => {
     axios
       .post("https://final-mcrcodes-project.herokuapp.com/events", fields)
       .then((response) => {
-        console.log(response)
+        console.log(response);
         setAlert({
           message: successAlertMessage(`/events/${response.data.id}`),
           isSuccess: true,
@@ -56,10 +56,12 @@ const CreateEvent = () => {
   return (
     <div className="createEvent">
       <h2 className="createEventTitle">Create your event</h2>
-      <p>Fill in all fields and click "create event"</p>
+      <p className="createEventInstruction">
+        Fill in all fields and click "create event"
+      </p>
 
       {/* form starts */}
-      <form onSubmit={handleCreateEvent}>
+      <form className="createEventForm" onSubmit={handleCreateEvent}>
         <div className="eventName">
           <label htmlFor="eventName">
             Event Name <br />
@@ -134,7 +136,11 @@ const CreateEvent = () => {
         </div>
 
         <div className="createEventButton">
-          <button data-testid="submitButton" className="submitButton" type="submit">
+          <button
+            data-testid="submitButton"
+            className="submitButton"
+            type="submit"
+          >
             Create event
           </button>
         </div>
