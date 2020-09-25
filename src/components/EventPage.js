@@ -33,6 +33,7 @@ const EventPage = ({ eventId }) => {
   });
 
   return (
+
     <div data-testid='eventdetails'>
       <h2>Here is your amazing page</h2>
       <p>Have fun at your event!</p>
@@ -46,9 +47,9 @@ const EventPage = ({ eventId }) => {
         <p>Event Time: {eventTime}</p>
         <p>Event Address: {eventAddress}</p>
       </div>
-      <Participants eventId={eventId}/>
-      <AddParticipant eventId={eventId} />
 
+      <AddParticipant eventId={eventId} />
+      <Participants eventId={eventId} />
     </div>
   );
 };

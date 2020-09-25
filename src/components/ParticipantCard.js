@@ -1,5 +1,6 @@
 import React from "react";
-import '../styles/ParticipantCard.css'
+import "../styles/ParticipantCard.css";
+
 
 const ParticipantCard = ({id, name, email, toBring, dislikes, dietInfo, removeParticipant}) => {
     return(
@@ -22,9 +23,8 @@ const ParticipantCard = ({id, name, email, toBring, dislikes, dietInfo, removePa
                 </div>
                 <button data-testid="removeButton" className="participantDelete" onClick={()=>removeParticipant(id)}>Delete</button>
             </div>
+    </>
+  );
+};
 
-        </>
-    )
-}
-
-export default ParticipantCard
+export default ParticipantCard;
