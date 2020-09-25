@@ -5,7 +5,6 @@ import '../styles/Participants.css'
 
 const Participants = ({eventId}) => {
     const [participants, setParticipants] = useState([])
-
     useEffect(() => {
         axios.get(`https://final-mcrcodes-project.herokuapp.com/events/${eventId}/participants`)
         .then((response) => setParticipants(response.data))
@@ -23,6 +22,7 @@ const Participants = ({eventId}) => {
             <ParticipantCard
                 key={index}
                 name={person.name}
+                email={person.email}
                 toBring={person.toBring}
                 dislikes={person.dislikes}
                 dietInfo={person.dietInfo}

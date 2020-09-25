@@ -53,6 +53,21 @@ const AddParticipant = ({ eventId }) => {
           </label>
         </div>
 
+        <div className="email">
+          <label htmlFor="email">
+            Email <br />
+            <input
+              type="text"
+              id="email"
+              name="email"
+              data-testid="email"
+              value={fields.email}
+              onChange={handleFieldChange}
+              placeholder="test@email.com"
+            />
+          </label>
+        </div>
+
         <div className="toBring">
           <label htmlFor="toBring">
             I am bringing... <br />
