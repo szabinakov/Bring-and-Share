@@ -1,35 +1,34 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import ToBring from './ToBring'
 import Dislikes from './Dislikes'
-import AddParticipant from './AddParticipant'
+import DietInfo from './DietInfo'
 
 const NavBar = () => {
     const [toBringListButton, setToBringListButton] = useState(false)
     const [dislikesButton, setDislikesButton] = useState(false)
-    const [addParticipantsButton, setAddPArticipantsButton] = useState(false)
-
-    const showlistofbrings = () => {
+    const [dietInfo, setDietInfo] = useState(false)
+    const showListOfBrings = () => {
         setToBringListButton(true)
     }
-    const showlistofdislikes = () => {
+    const showListOfDislikes = () => {
         setDislikesButton(true)
     }
-    const showaddparticipants = () => {
-        setAddPArticipantsButton(true)
+    const showListOfDietInfo = () => {
+        setDietInfo(true)
     }
-
     return (
         <div className="navbarContainer">
             <div>
-                <button onClick={() => showlistofbrings()}>People Bringing</button>
+                <button onClick={() => showListOfBrings()}>People Bringing</button>
                     {toBringListButton === true && <ToBring/>}
             </div>
             <div>
-                <button onClick={() => showlistofdislikes()}>Dislikes</button>
+                <button onClick={() => showListOfDislikes()}>Dislikes</button>
                     {dislikesButton === true && <Dislikes/>}
             </div>
             <div>
-                <button onClick={() => showaddparticipants}>Add Attendee</button>
+                <button onClick={() => showListOfDietInfo}>Diet Information</button>
+                    {dietInfo === true && <DietInfo/>}
             </div>
         </div>
     )

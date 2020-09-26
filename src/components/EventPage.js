@@ -1,5 +1,6 @@
 // list of things to import
 import React, { useState, useEffect } from "react";
+
 import AddParticipant from "./AddParticipant";
 import "../styles/EventPage.css";
 import axios from "axios";
@@ -42,6 +43,11 @@ const EventPage = (props) => {
   return (
     <>
     <NavBar/>
+    <AddParticipant
+        eventId={eventId}
+        fetchParticipants={fetchParticipants}
+        setFetchParticipants={setFetchParticipants}
+      />
     <div data-testid="eventdetails">
       <h2>Here is your amazing page</h2>
       <p>Have fun at your event!</p>
@@ -58,11 +64,6 @@ const EventPage = (props) => {
       </div>
       <HostDetails eventId={eventId} />
       <Participants
-        eventId={eventId}
-        fetchParticipants={fetchParticipants}
-        setFetchParticipants={setFetchParticipants}
-      />
-      <AddParticipant
         eventId={eventId}
         fetchParticipants={fetchParticipants}
         setFetchParticipants={setFetchParticipants}
