@@ -7,32 +7,49 @@ import EventPage from "./EventPage";
 
 function App() {
   return (
-    <div className="App">
+    <div className="container">
       <ul className="bunting">
-        <li className="down_triangle"></li>
-        <li className="down_triangle"></li>
-        <li className="down_triangle"></li>
-        <li className="down_triangle"></li>
-        <li className="down_triangle"></li>
-        <li className="down_triangle"></li>
-        <li className="down_triangle"></li>
-        <li className="down_triangle"></li>
-        <li className="down_triangle"></li>
-        <li className="down_triangle"></li>
-        <li className="down_triangle"></li>
-        <li className="down_triangle"></li>
-        <li className="down_triangle"></li>
-        <li className="down_triangle"></li>
-        <li className="down_triangle"></li>
-        <li className="down_triangle"></li>
-        <li className="down_triangle"></li>
-        <li className="down_triangle"></li>
-        <li className="down_triangle"></li>
-        <li className="down_triangle"></li>
-        <li className="down_triangle"></li>
-        <li className="down_triangle"></li>
-        <li className="down_triangle"></li>
+        <li className="down_triangle pink"></li>
+        <li className="down_triangle blue"></li>
+        <li className="down_triangle yellow"></li>
+        <li className="down_triangle pink"></li>
+        <li className="down_triangle blue"></li>
+        <li className="down_triangle yellow"></li>
+        <li className="down_triangle pink"></li>
+        <li className="down_triangle blue"></li>
+        <li className="down_triangle yellow"></li>
+        <li className="down_triangle pink"></li>
+        <li className="down_triangle blue"></li>
+        <li className="down_triangle yellow"></li>
+        <li className="down_triangle pink"></li>
+        <li className="down_triangle blue"></li>
+        <li className="down_triangle yellow"></li>
+        <li className="down_triangle pink"></li>
+        <li className="down_triangle blue"></li>
+        <li className="down_triangle yellow"></li>
+        <li className="down_triangle pink"></li>
+        <li className="down_triangle blue"></li>
+        <li className="down_triangle yellow"></li>
+        <li className="down_triangle pink"></li>
+        <li className="down_triangle blue"></li>
+        <li className="down_triangle yellow"></li>
       </ul>
+      <div className="confetti"></div>
+      <div className="confetti"></div>
+      <div className="confetti"></div>
+      <div className="confetti"></div>
+      <div className="confetti"></div>
+      <div className="confetti"></div>
+      <div className="confetti"></div>
+      <div className="confetti"></div>
+      <div className="confetti"></div>
+      <div className="confetti"></div>
+      <div className="confetti"></div>
+      <div className="confetti"></div>
+      <div className="confetti"></div>
+      <div className="confetti"></div>
+      <div className="confetti"></div>
+      <div className="confetti"></div>
       <h1 className="appTitle">Bring & Share</h1>
       <BrowserRouter>
         <Switch>
