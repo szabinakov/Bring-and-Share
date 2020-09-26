@@ -9,7 +9,7 @@ const HostDetails = ({ eventId }) => {
       .get(
         `https://final-mcrcodes-project.herokuapp.com/events/${eventId}/participants`
       )
-      .then((response) => setParticipantsEmail(response.data.email))
+      .then((response) => setParticipantsEmail(response.data))
       .catch((err) => console.log(err));
   }, [eventId]);
 
@@ -22,16 +22,21 @@ const HostDetails = ({ eventId }) => {
   }, [eventId]);
 
   let i;
-  for (i = 0; i > participantsEmail.length; i++) {
-    if (participantsEmail[i] === hostEmail) {
+  for (i = 0; i < participantsEmail.length; i++) {
+    console.log(participantsEmail[i].email);
+    console.log(hostEmail);
+    if (participantsEmail[i].email === hostEmail) {
+      console.log("Host found");
       return (
         <div className="hostDetails" data-testid="hostdetails">
           <h3>Host details</h3>
-          <p>Host email: {participantsEmail}</p>
+          <p>Host email: {hostEmail}</p>
         </div>
       );
     }
   }
+
+  return null;
 };
 
 export default HostDetails;

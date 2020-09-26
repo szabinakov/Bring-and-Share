@@ -3,7 +3,7 @@ import axios from "axios";
 import ParticipantCard from "../components/ParticipantCard";
 import "../styles/Participants.css";
 
-const Participants = ({ eventId, fetchParticipants }) => {
+const Participants = ({ eventId, fetchParticipants, setFetchParticipants }) => {
   const [participants, setParticipants] = useState([]);
   useEffect(() => {
     async function fetchData() {
@@ -23,7 +23,9 @@ const Participants = ({ eventId, fetchParticipants }) => {
       .delete(
         `https://final-mcrcodes-project.herokuapp.com/events/${eventId}/participants/${id}`
       )
-      .then((res) => console.log(res))
+      .then(() => {
+        setFetchParticipants(!fetchParticipants);
+      })
       .catch((err) => console.log(err));
   };
   return (

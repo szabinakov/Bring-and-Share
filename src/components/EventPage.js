@@ -8,7 +8,6 @@ import HostDetails from "./HostDetails";
 
 const EventPage = (props) => {
   const eventId = props.match.params.eventId;
-  console.log(eventId);
 
   const [eventName, setEventName] = useState("");
   const [hostName, setHostName] = useState("");
@@ -54,8 +53,12 @@ const EventPage = (props) => {
         <p>Event Address: {eventAddress}</p>
         <p>Host Email: {hostEmail}</p>
       </div>
-      {/* <HostDetails eventId={eventId} /> */}
-      <Participants eventId={eventId} fetchParticipants={fetchParticipants} />
+      <HostDetails eventId={eventId} />
+      <Participants
+        eventId={eventId}
+        fetchParticipants={fetchParticipants}
+        setFetchParticipants={setFetchParticipants}
+      />
       <AddParticipant
         eventId={eventId}
         fetchParticipants={fetchParticipants}
