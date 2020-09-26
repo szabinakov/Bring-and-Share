@@ -7,23 +7,6 @@ import CreateEvent from "./CreateEvent";
 import EventPage from "./EventPage";
 
 function App() {
-  const [eventId, setEventId] = useState([]);
-
-  useEffect(() => {
-    async function fetchData() {
-      await axios
-        .get(`https://final-mcrcodes-project.herokuapp.com/events`)
-        .then((response) => {
-          setEventId(response.data.map((e) => e.id));
-        })
-        .catch((error) => {
-          console.log(error);
-        });
-    }
-
-    fetchData();
-  }, []);
-
   return (
     <div className="App">
       <ul className="bunting">
@@ -55,13 +38,7 @@ function App() {
       <BrowserRouter>
         <Switch>
           <Route exact path="/" component={CreateEvent} />
-          {eventId.map((eachId) => (
-            <Route
-              exact
-              path={`/events/${eachId}`}
-              render={(props) => <EventPage {...props} eventId={eachId} />}
-            />
-          ))}
+          <Route exact path="/events/:eventId" component={EventPage} />
         </Switch>
       </BrowserRouter>
     </div>

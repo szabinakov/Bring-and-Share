@@ -6,6 +6,8 @@
         "Rocher",
         "body",
         "browserslist",
-        "import"
+        "eventdetails",
+        "import",
+        "testid"
     ]
 }

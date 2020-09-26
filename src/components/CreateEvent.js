@@ -8,6 +8,7 @@ const CreateEvent = () => {
     fields: {
       eventName: "",
       hostName: "",
+      hostEmail: "",
       date: "",
       time: "",
       address: "",
@@ -131,6 +132,21 @@ const CreateEvent = () => {
               value={fields.address}
               onChange={handleFieldChange}
               placeholder="Mi casa"
+            />
+          </label>
+        </div>
+
+        <div className="hostEmail">
+          <label htmlFor="hostEmail">
+            Host's email <br />
+            <input
+              type="text"
+              id="hostEmail"
+              name="hostEmail"
+              data-testid="hostEmail"
+              value={fields.hostEmail}
+              onChange={handleFieldChange}
+              placeholder="hostEmail"
             />
           </label>
         </div>
