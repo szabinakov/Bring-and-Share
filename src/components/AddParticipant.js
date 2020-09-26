@@ -18,7 +18,13 @@ const AddParticipant = ({
   };
 
   const [fields, setFields] = useState(initialState.fields);
-
+  const [addParticipantsButton, setAddPArticipantsButton] = useState(false)
+  const showaddparticipants = () => {
+    setAddPArticipantsButton(true)
+    }
+  const closeWindow = () => {
+    setAddPArticipantsButton(false)
+  }
   const handleAddPerson = (e) => {
     e.preventDefault();
 
@@ -39,7 +45,13 @@ const AddParticipant = ({
   };
 
   return (
+    <>
+    <button onClick={() => showaddparticipants()}>Press to Add Attendees</button>
+    {addParticipantsButton === true &&
     <div className="addParticipant">
+      <p className='closeX'>
+        <button onClick={closeWindow}>x</button>
+      </p>
       <h2>Add your participants</h2>
       <p>Fill in all fields and click "create event"</p>
 
@@ -120,13 +132,14 @@ const AddParticipant = ({
         </div>
 
         <div className="addParticipantButton">
-          <button data-testid="addButton" className="addButton" type="submit">
+          <button  data-testid="addButton" className="addButton" type="submit">
             Add
           </button>
         </div>
       </form>
       {/* form ends */}
-    </div>
+    </div>}
+    </>
   );
 };
 
