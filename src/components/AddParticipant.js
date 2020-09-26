@@ -2,7 +2,11 @@ import React, { useState } from "react";
 import axios from "axios";
 import "../styles/AddParticipant.css";
 
-const AddParticipant = ({ eventId }) => {
+const AddParticipant = ({
+  eventId,
+  fetchParticipants,
+  setFetchParticipants,
+}) => {
   const initialState = {
     fields: {
       name: "",
@@ -25,6 +29,9 @@ const AddParticipant = ({ eventId }) => {
         `https://final-mcrcodes-project.herokuapp.com/events/${eventId}/participants`,
         fields
       )
+      .then(() => {
+        setFetchParticipants(!fetchParticipants);
+      })
       .catch((error) => {
         console.log(error);
       });

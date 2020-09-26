@@ -4,15 +4,21 @@ import AddParticipant from "./AddParticipant";
 import "../styles/EventPage.css";
 import axios from "axios";
 import Participants from "./Participants";
+import HostDetails from "./HostDetails";
 
+const EventPage = (props) => {
+  const eventId = props.match.params.eventId;
+  console.log(eventId);
 
-const EventPage = ({ eventId }) => {
   const [eventName, setEventName] = useState("");
   const [hostName, setHostName] = useState("");
   const [eventDate, setEventDate] = useState("");
   const [eventTime, setEventTime] = useState("");
   const [eventAddress, setEventAddress] = useState("");
-  const eventLink = `https://final-mcrcodes-project.herokuapp.com/events/${eventId}`
+  const [hostEmail, setHostEmail] = useState("");
+  const [fetchParticipants, setFetchParticipants] = useState(true);
+
+  const eventLink = `https://bring-and-share-silk.vercel.app/events/${eventId}`;
   useEffect(() => {
     async function fetchData() {
       await axios
@@ -20,6 +26,7 @@ const EventPage = ({ eventId }) => {
         .then((response) => {
           setEventName(response.data.eventName);
           setHostName(response.data.hostName);
+          setHostEmail(response.data.hostEmail);
           setEventDate(response.data.date);
           setEventTime(response.data.time);
           setEventAddress(response.data.address);
@@ -30,14 +37,13 @@ const EventPage = ({ eventId }) => {
     }
 
     fetchData();
-  });
+  }, [eventId]);
 
   return (
-
-    <div data-testid='eventdetails'>
+    <div data-testid="eventdetails">
       <h2>Here is your amazing page</h2>
       <p>Have fun at your event!</p>
-        <p>Share event link with your attendees:{eventLink}</p>
+      <p>Share event link with your attendees:{eventLink}</p>
       <div className="eventDetails">
         <h3>Event details</h3>
         <p>Event ID: {eventId}</p>
@@ -46,10 +52,15 @@ const EventPage = ({ eventId }) => {
         <p>Event Date: {eventDate}</p>
         <p>Event Time: {eventTime}</p>
         <p>Event Address: {eventAddress}</p>
+        <p>Host Email: {hostEmail}</p>
       </div>
-
-      <AddParticipant eventId={eventId} />
-      <Participants eventId={eventId} />
+      {/* <HostDetails eventId={eventId} /> */}
+      <Participants eventId={eventId} fetchParticipants={fetchParticipants} />
+      <AddParticipant
+        eventId={eventId}
+        fetchParticipants={fetchParticipants}
+        setFetchParticipants={setFetchParticipants}
+      />
     </div>
   );
 };
