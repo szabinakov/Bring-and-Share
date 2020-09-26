@@ -5,6 +5,7 @@ import "../styles/EventPage.css";
 import axios from "axios";
 import Participants from "./Participants";
 import HostDetails from "./HostDetails";
+import NavBar from "./NavBar";
 
 const EventPage = (props) => {
   const eventId = props.match.params.eventId;
@@ -39,6 +40,8 @@ const EventPage = (props) => {
   }, [eventId]);
 
   return (
+    <>
+    <NavBar/>
     <div data-testid="eventdetails">
       <h2>Here is your amazing page</h2>
       <p>Have fun at your event!</p>
@@ -65,6 +68,7 @@ const EventPage = (props) => {
         setFetchParticipants={setFetchParticipants}
       />
     </div>
+    </>
   );
 };
 
