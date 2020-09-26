@@ -3,13 +3,13 @@ import "../styles/HostDetails.css";
 import axios from "axios";
 
 const HostDetails = ({ eventId }) => {
-  const [participantsEmail, setParticipantsEmail] = useState([]);
+  const [participants, setParticipants] = useState([]);
   useEffect(() => {
     axios
       .get(
         `https://final-mcrcodes-project.herokuapp.com/events/${eventId}/participants`
       )
-      .then((response) => setParticipantsEmail(response.data))
+      .then((response) => setParticipants(response.data))
       .catch((err) => console.log(err));
   }, [eventId]);
 
@@ -22,15 +22,13 @@ const HostDetails = ({ eventId }) => {
   }, [eventId]);
 
   let i;
-  for (i = 0; i < participantsEmail.length; i++) {
-    console.log(participantsEmail[i].email);
-    console.log(hostEmail);
-    if (participantsEmail[i].email === hostEmail) {
-      console.log("Host found");
+  for (i = 0; i < participants.length; i++) {
+    if (participants[i].email === hostEmail) {
       return (
         <div className="hostDetails" data-testid="hostdetails">
           <h3>Host details</h3>
-          <p>Host email: {hostEmail}</p>
+          <p>Host Name: {participants[i].name}</p>
+          <p>Host email: {participants[i].email}</p>
         </div>
       );
     }

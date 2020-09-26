@@ -1,39 +1,55 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import "../styles/App.css";
-import axios from "axios";
 
 import CreateEvent from "./CreateEvent";
 import EventPage from "./EventPage";
 
 function App() {
   return (
-    <div className="App">
+    <div className="container">
       <ul className="bunting">
-        <li className="down_triangle"></li>
-        <li className="down_triangle"></li>
-        <li className="down_triangle"></li>
-        <li className="down_triangle"></li>
-        <li className="down_triangle"></li>
-        <li className="down_triangle"></li>
-        <li className="down_triangle"></li>
-        <li className="down_triangle"></li>
-        <li className="down_triangle"></li>
-        <li className="down_triangle"></li>
-        <li className="down_triangle"></li>
-        <li className="down_triangle"></li>
-        <li className="down_triangle"></li>
-        <li className="down_triangle"></li>
-        <li className="down_triangle"></li>
-        <li className="down_triangle"></li>
-        <li className="down_triangle"></li>
-        <li className="down_triangle"></li>
-        <li className="down_triangle"></li>
-        <li className="down_triangle"></li>
-        <li className="down_triangle"></li>
-        <li className="down_triangle"></li>
-        <li className="down_triangle"></li>
+        <li className="down_triangle pink"></li>
+        <li className="down_triangle blue"></li>
+        <li className="down_triangle yellow"></li>
+        <li className="down_triangle pink"></li>
+        <li className="down_triangle blue"></li>
+        <li className="down_triangle yellow"></li>
+        <li className="down_triangle pink"></li>
+        <li className="down_triangle blue"></li>
+        <li className="down_triangle yellow"></li>
+        <li className="down_triangle pink"></li>
+        <li className="down_triangle blue"></li>
+        <li className="down_triangle yellow"></li>
+        <li className="down_triangle pink"></li>
+        <li className="down_triangle blue"></li>
+        <li className="down_triangle yellow"></li>
+        <li className="down_triangle pink"></li>
+        <li className="down_triangle blue"></li>
+        <li className="down_triangle yellow"></li>
+        <li className="down_triangle pink"></li>
+        <li className="down_triangle blue"></li>
+        <li className="down_triangle yellow"></li>
+        <li className="down_triangle pink"></li>
+        <li className="down_triangle blue"></li>
+        <li className="down_triangle yellow"></li>
       </ul>
+      <div className="confetti"></div>
+      <div className="confetti"></div>
+      <div className="confetti"></div>
+      <div className="confetti"></div>
+      <div className="confetti"></div>
+      <div className="confetti"></div>
+      <div className="confetti"></div>
+      <div className="confetti"></div>
+      <div className="confetti"></div>
+      <div className="confetti"></div>
+      <div className="confetti"></div>
+      <div className="confetti"></div>
+      <div className="confetti"></div>
+      <div className="confetti"></div>
+      <div className="confetti"></div>
+      <div className="confetti"></div>
       <h1 className="appTitle">Bring & Share</h1>
       <BrowserRouter>
         <Switch>

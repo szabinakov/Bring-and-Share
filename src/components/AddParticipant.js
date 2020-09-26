@@ -23,8 +23,6 @@ const AddParticipant = ({
     e.preventDefault();
 
     axios
-
-      // /events/:eventId/participants
       .post(
         `https://final-mcrcodes-project.herokuapp.com/events/${eventId}/participants`,
         fields
@@ -62,14 +60,14 @@ const AddParticipant = ({
           </label>
         </div>
 
-        <div className="email">
-          <label htmlFor="email">
+        <div className="participantEmail">
+          <label htmlFor="participantEmail">
             Email <br />
             <input
               type="text"
-              id="email"
-              name="email"
-              data-testid="email"
+              id="participantEmail"
+              name="participantEmail"
+              data-testid="participantEmail"
               value={fields.email}
               onChange={handleFieldChange}
               placeholder="test@email.com"
