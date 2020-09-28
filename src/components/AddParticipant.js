@@ -46,7 +46,7 @@ const AddParticipant = ({
 
   return (
     <>
-    <button onClick={() => showaddparticipants()}>Press to Add Attendees</button>
+    <button className='addParticipantButton' onClick={() => showaddparticipants()}>Press to Add Attendees</button>
     {addParticipantsButton === true &&
     <div className="addParticipant">
       <p className='closeX'>

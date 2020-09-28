@@ -42,16 +42,16 @@ const EventPage = (props) => {
 
   return (
     <>
-    <NavBar/>
-    <AddParticipant
-        eventId={eventId}
-        fetchParticipants={fetchParticipants}
-        setFetchParticipants={setFetchParticipants}
-      />
     <div data-testid="eventdetails">
       <h2>Here is your amazing page</h2>
       <p>Have fun at your event!</p>
       <p>Share event link with your attendees:{eventLink}</p>
+      <AddParticipant
+        eventId={eventId}
+        fetchParticipants={fetchParticipants}
+        setFetchParticipants={setFetchParticipants}
+      />
+      <NavBar/>
       <div className="eventDetails">
         <h3>Event details</h3>
         <p>Event ID: {eventId}</p>
