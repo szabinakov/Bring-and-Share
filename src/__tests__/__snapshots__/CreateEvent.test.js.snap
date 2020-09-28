@@ -5,13 +5,19 @@ exports[`CreateEvent component renders correctly 1`] = `
   <div
     class="createEvent"
   >
-    <h2>
+    <h2
+      class="createEventTitle"
+    >
       Create your event
     </h2>
-    <p>
+    <p
+      class="createEventInstruction"
+    >
       Fill in all fields and click "create event"
     </p>
-    <form>
+    <form
+      class="createEventForm"
+    >
       <div
         class="eventName"
       >
@@ -95,6 +101,24 @@ exports[`CreateEvent component renders correctly 1`] = `
             id="address"
             name="address"
             placeholder="Mi casa"
+            type="text"
+            value=""
+          />
+        </label>
+      </div>
+      <div
+        class="hostEmail"
+      >
+        <label
+          for="hostEmail"
+        >
+          Host's email 
+          <br />
+          <input
+            data-testid="hostEmail"
+            id="hostEmail"
+            name="hostEmail"
+            placeholder="hostEmail"
             type="text"
             value=""
           />
