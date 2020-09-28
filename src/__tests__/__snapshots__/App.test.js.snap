@@ -3,21 +3,153 @@
 exports[`App component matches the snapshot 1`] = `
 <DocumentFragment>
   <div
-    class="App"
+    class="container"
   >
-    <h1>
+    <ul
+      class="bunting"
+    >
+      <li
+        class="down_triangle pink"
+      />
+      <li
+        class="down_triangle blue"
+      />
+      <li
+        class="down_triangle yellow"
+      />
+      <li
+        class="down_triangle pink"
+      />
+      <li
+        class="down_triangle blue"
+      />
+      <li
+        class="down_triangle yellow"
+      />
+      <li
+        class="down_triangle pink"
+      />
+      <li
+        class="down_triangle blue"
+      />
+      <li
+        class="down_triangle yellow"
+      />
+      <li
+        class="down_triangle pink"
+      />
+      <li
+        class="down_triangle blue"
+      />
+      <li
+        class="down_triangle yellow"
+      />
+      <li
+        class="down_triangle pink"
+      />
+      <li
+        class="down_triangle blue"
+      />
+      <li
+        class="down_triangle yellow"
+      />
+      <li
+        class="down_triangle pink"
+      />
+      <li
+        class="down_triangle blue"
+      />
+      <li
+        class="down_triangle yellow"
+      />
+      <li
+        class="down_triangle pink"
+      />
+      <li
+        class="down_triangle blue"
+      />
+      <li
+        class="down_triangle yellow"
+      />
+      <li
+        class="down_triangle pink"
+      />
+      <li
+        class="down_triangle blue"
+      />
+      <li
+        class="down_triangle yellow"
+      />
+    </ul>
+    <div
+      class="confetti"
+    />
+    <div
+      class="confetti"
+    />
+    <div
+      class="confetti"
+    />
+    <div
+      class="confetti"
+    />
+    <div
+      class="confetti"
+    />
+    <div
+      class="confetti"
+    />
+    <div
+      class="confetti"
+    />
+    <div
+      class="confetti"
+    />
+    <div
+      class="confetti"
+    />
+    <div
+      class="confetti"
+    />
+    <div
+      class="confetti"
+    />
+    <div
+      class="confetti"
+    />
+    <div
+      class="confetti"
+    />
+    <div
+      class="confetti"
+    />
+    <div
+      class="confetti"
+    />
+    <div
+      class="confetti"
+    />
+    <h1
+      class="appTitle"
+    >
       Bring & Share
     </h1>
     <div
       class="createEvent"
     >
-      <h2>
+      <h2
+        class="createEventTitle"
+      >
         Create your event
       </h2>
-      <p>
+      <p
+        class="createEventInstruction"
+      >
         Fill in all fields and click "create event"
       </p>
-      <form>
+      <form
+        class="createEventForm"
+      >
         <div
           class="eventName"
         >
@@ -101,6 +233,24 @@ exports[`App component matches the snapshot 1`] = `
               id="address"
               name="address"
               placeholder="Mi casa"
+              type="text"
+              value=""
+            />
+          </label>
+        </div>
+        <div
+          class="hostEmail"
+        >
+          <label
+            for="hostEmail"
+          >
+            Host's email 
+            <br />
+            <input
+              data-testid="hostEmail"
+              id="hostEmail"
+              name="hostEmail"
+              placeholder="hostEmail"
               type="text"
               value=""
             />

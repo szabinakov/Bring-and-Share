@@ -12,6 +12,14 @@ exports[`ParticipantCard component matches the snapshot 1`] = `
       MyName
     </div>
     <div
+      class="participantEmailInfo"
+      data-testid="email"
+    >
+      <a
+        href="mailto:undefined"
+      />
+    </div>
+    <div
       class="participantBrings"
       data-testid="toBring"
     >
