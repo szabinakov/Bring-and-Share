@@ -42,33 +42,34 @@ const EventPage = (props) => {
 
   return (
     <>
-    <div data-testid="eventdetails">
-      <h2>Here is your amazing page</h2>
-      <p>Have fun at your event!</p>
-      <p>Share event link with your attendees:{eventLink}</p>
-      <AddParticipant
-        eventId={eventId}
-        fetchParticipants={fetchParticipants}
-        setFetchParticipants={setFetchParticipants}
-      />
-      <NavBar/>
-      <div className="eventDetails">
-        <h3>Event details</h3>
-        <p>Event ID: {eventId}</p>
-        <p>Event Name: {eventName}</p>
-        <p>Host Name: {hostName}</p>
-        <p>Event Date: {eventDate}</p>
-        <p>Event Time: {eventTime}</p>
-        <p>Event Address: {eventAddress}</p>
-        <p>Host Email: {hostEmail}</p>
+      <div data-testid="eventdetails">
+        <h2>Here is your amazing page</h2>
+        <p>Have fun at your event!</p>
+        <p>Share event link with your attendees:{eventLink}</p>
+
+        <div className="eventDetails">
+          <h3>Event details</h3>
+          <p>Event ID: {eventId}</p>
+          <p>Event Name: {eventName}</p>
+          <p>Host Name: {hostName}</p>
+          <p>Event Date: {eventDate}</p>
+          <p>Event Time: {eventTime}</p>
+          <p>Event Address: {eventAddress}</p>
+          <p>Host Email: {hostEmail}</p>
+        </div>
+        <HostDetails eventId={eventId} />
+        <Participants
+          eventId={eventId}
+          fetchParticipants={fetchParticipants}
+          setFetchParticipants={setFetchParticipants}
+        />
+        <AddParticipant
+          eventId={eventId}
+          fetchParticipants={fetchParticipants}
+          setFetchParticipants={setFetchParticipants}
+        />
+        <NavBar />
       </div>
-      <HostDetails eventId={eventId} />
-      <Participants
-        eventId={eventId}
-        fetchParticipants={fetchParticipants}
-        setFetchParticipants={setFetchParticipants}
-      />
-    </div>
     </>
   );
 };

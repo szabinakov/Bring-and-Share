@@ -34,7 +34,6 @@ const CreateEvent = () => {
     axios
       .post("https://final-mcrcodes-project.herokuapp.com/events", fields)
       .then((response) => {
-        console.log(response);
         setAlert({
           message: successAlertMessage(`/events/${response.data.id}`),
           isSuccess: true,
@@ -61,7 +60,6 @@ const CreateEvent = () => {
         Fill in all fields and click "create event"
       </p>
 
-      {/* form starts */}
       <form className="createEventForm" onSubmit={handleCreateEvent}>
         <div className="eventName">
           <label htmlFor="eventName">
@@ -146,7 +144,7 @@ const CreateEvent = () => {
               data-testid="hostEmail"
               value={fields.hostEmail}
               onChange={handleFieldChange}
-              placeholder="hostEmail"
+              placeholder="host@mail.com"
             />
           </label>
         </div>
@@ -162,7 +160,6 @@ const CreateEvent = () => {
         </div>
         <Alert message={alert.message} success={alert.isSuccess} />
       </form>
-      {/* form ends */}
     </div>
   );
 };
