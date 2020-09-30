@@ -33,7 +33,7 @@
 .date,
 .time,
 .address,
-.email,
+.hostEmail,
 .createEventButton {
   width: 200px;
   padding: 5px;
@@ -50,7 +50,7 @@
 #date,
 #time,
 #address,
-#email {
+#hostEmail {
   height: 22px;
   border-radius: 8px;
   border: 1px solid rgb(102, 102, 102);
@@ -93,7 +93,7 @@
     font-size: 20px;
   }
   .address,
-  .email,
+  .hostEmail,
   .createEventButton {
     width: 400px;
     padding: 10px;
@@ -108,7 +108,7 @@
     width: 200px;
   }
   #address,
-  #email {
+  #hostEmail {
     height: 27px;
     width: 260px;
   }
