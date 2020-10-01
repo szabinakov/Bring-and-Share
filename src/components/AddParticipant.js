@@ -18,12 +18,12 @@ const AddParticipant = ({
   };
 
   const [fields, setFields] = useState(initialState.fields);
-  const [addParticipantsButton, setAddPArticipantsButton] = useState(false)
+  const [addParticipantsButton, setAddParticipantsButton] = useState(false)
   const showaddparticipants = () => {
-    setAddPArticipantsButton(true)
+    setAddParticipantsButton(true)
     }
   const closeWindow = () => {
-    setAddPArticipantsButton(false)
+    setAddParticipantsButton(false)
   }
   const handleAddPerson = (e) => {
     e.preventDefault();
@@ -46,7 +46,7 @@ const AddParticipant = ({
 
   return (
     <>
-    <button className='addParticipantButton' onClick={() => showaddparticipants()}>Press to Add Attendees</button>
+    <button data-testid='addParticipantNavButton' className='addParticipantNavButton' onClick={() => showaddparticipants()}>Press to Add Attendees</button>
     {addParticipantsButton === true &&
     <div className="addParticipant">
       <p className='closeX'>
@@ -56,7 +56,7 @@ const AddParticipant = ({
       <p>Fill in all fields and click "create event"</p>
 
       {/* form starts */}
-      <form onSubmit={handleAddPerson}>
+      <form data-testid='addParticipantForm' onSubmit={handleAddPerson}>
         <div className="name">
           <label htmlFor="name">
             Name <br />
