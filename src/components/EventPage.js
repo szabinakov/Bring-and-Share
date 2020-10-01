@@ -9,6 +9,7 @@ import HostDetails from "./HostDetails";
 import NavBar from "./NavBar";
 
 const EventPage = (props) => {
+  
   const eventId = props.match.params.eventId;
 
   const [eventName, setEventName] = useState("");

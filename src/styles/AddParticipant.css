@@ -34,9 +34,7 @@
   box-shadow: 5px 5px #888888;
 }
 
-.addParticipantButton{
-  display: flex;
-  justify-content: center;
+.addParticipantNavButton{
   margin-bottom: 10px;
   padding: 10px;
   border-radius: 10px;
