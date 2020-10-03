@@ -5,14 +5,23 @@
   justify-content: space-evenly;
 }
 
-.eventPageTitle,
-.eventPageDescription {
+.titleOfTheEvent,
+.eventLink {
   width: 100%;
-  border: 5px solid red;
+  margin: 0px;
+  padding: 2px;
+  color: gold;
   text-align: center;
+}
+.topHalf {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .eventDetails {
   border: 5px solid yellow;
   width: 250px;
+  font-size: 15px;
 }

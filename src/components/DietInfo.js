@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import "../styles/DietInfo.css";
 
 const DietInfo = ({ eventId }) => {
   const [participants, setParticipants] = useState([]);
@@ -18,7 +19,7 @@ const DietInfo = ({ eventId }) => {
   }, [eventId]);
 
   return (
-    <div>
+    <div className="dietInfoList">
       {participants.map((person) => (
         <p>{person.dietInfo}</p>
       ))}
