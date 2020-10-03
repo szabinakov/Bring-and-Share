@@ -1,12 +1,9 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
+const ToBring = ({ eventId }) => {
+  const [participants, setParticipants] = useState([]);
 
-
-const ToBring = ({eventId}) => {
- 
-const [participants, setParticipants] = useState([]);
-  
   useEffect(() => {
     async function fetchData() {
       await axios
@@ -20,13 +17,13 @@ const [participants, setParticipants] = useState([]);
     fetchData();
   }, [eventId]);
 
-     return(
-      <div>
-        {participants.map((person, index) => ( <p>{person.toBring}</p> ))}
-      </div>
-);
-}
+  return (
+    <div>
+      {participants.map((person) => (
+        <p>{person.toBring}</p>
+      ))}
+    </div>
+  );
+};
 
-export default ToBring 
-
-
+export default ToBring;

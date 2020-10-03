@@ -10,11 +10,9 @@ import axios from "axios";
 
 // export default Dislikes
 
+const Dislikes = ({ eventId }) => {
+  const [participants, setParticipants] = useState([]);
 
-const Dislikes = ({eventId}) => {
- 
-const [participants, setParticipants] = useState([]);
-  
   useEffect(() => {
     async function fetchData() {
       await axios
@@ -25,14 +23,16 @@ const [participants, setParticipants] = useState([]);
         .catch((err) => console.log(err));
     }
 
- fetchData();
+    fetchData();
   }, [eventId]);
 
-     return(
-      <div>
-        {participants.map((person, index) => ( <p>{person.dislikes}</p> ))}
-      </div>
-);
-}
+  return (
+    <div>
+      {participants.map((person) => (
+        <p>{person.dislikes}</p>
+      ))}
+    </div>
+  );
+};
 
-export default Dislikes 
+export default Dislikes;
