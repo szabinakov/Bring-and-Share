@@ -12,7 +12,7 @@
 }
 
 .name,
-.participantEmail,
+.email,
 .toBring,
 .dislikes,
 .dietInfo,
@@ -34,7 +34,7 @@
   box-shadow: 5px 5px #888888;
 }
 
-.addParticipantNavButton{
+.addParticipantNavButton {
   margin-bottom: 10px;
   padding: 10px;
   border-radius: 10px;
