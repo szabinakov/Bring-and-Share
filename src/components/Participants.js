@@ -5,13 +5,16 @@ import "../styles/Participants.css";
 
 const Participants = ({ eventId, fetchParticipants, setFetchParticipants }) => {
   const [participants, setParticipants] = useState([]);
+  
   useEffect(() => {
     async function fetchData() {
       await axios
         .get(
           `https://final-mcrcodes-project.herokuapp.com/events/${eventId}/participants`
         )
-        .then((response) => setParticipants(response.data))
+        .then((response) => {setParticipants(response.data)
+        
+        })
         .catch((err) => console.log(err));
     }
 
