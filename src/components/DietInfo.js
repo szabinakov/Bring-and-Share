@@ -17,8 +17,6 @@ const DietInfo = ({ eventId }) => {
     fetchData();
   }, [eventId]);
 
-  console.log(participants);
-
   return (
     <div>
       {participants.map((person) => (
