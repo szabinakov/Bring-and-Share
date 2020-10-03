@@ -1,12 +1,9 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
+const DietInfo = ({ eventId }) => {
+  const [participants, setParticipants] = useState([]);
 
-
-const DietInfo = ({eventId}) => {
- 
-const [participants, setParticipants] = useState([]);
-  
   useEffect(() => {
     async function fetchData() {
       await axios
@@ -17,14 +14,18 @@ const [participants, setParticipants] = useState([]);
         .catch((err) => console.log(err));
     }
 
- fetchData();
+    fetchData();
   }, [eventId]);
 
-     return(
-      <div>
-        {participants.map((person, index) => ( <p>{person.dietInfo}</p> ))}
-      </div>
-);
-}
+  console.log(participants);
 
-export default DietInfo
+  return (
+    <div>
+      {participants.map((person) => (
+        <p>{person.dietInfo}</p>
+      ))}
+    </div>
+  );
+};
+
+export default DietInfo;
