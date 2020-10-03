@@ -8,34 +8,45 @@ const NavBar = ({ eventId }) => {
   const [toBringListButton, setToBringListButton] = useState(false);
   const [dislikesButton, setDislikesButton] = useState(false);
   const [dietInfo, setDietInfo] = useState(false);
-  const showListOfBrings = () => {
-    setToBringListButton(true);
-  };
-  const showListOfDislikes = () => {
-    setDislikesButton(true);
-  };
-  const showListOfDietInfo = () => {
-    setDietInfo(true);
-  };
+
+  // const showListOfDislikes = () => {
+  //   setDislikesButton(true);
+  // };
+
   return (
     <div className="navbarContainer">
       <div>
-        <button className="toBringButton" onClick={() => showListOfBrings()}>
+        <button
+          className="toBringButton"
+          onClick={() => {
+            setToBringListButton(!toBringListButton);
+          }}
+        >
           People Bringing
         </button>
-        {toBringListButton === true && <ToBring eventId={eventId} />}
+        {toBringListButton && <ToBring eventId={eventId} />}
       </div>
       <div>
-        <button className="dislikeButton" onClick={() => showListOfDislikes()}>
+        <button
+          className="dislikeButton"
+          onClick={() => {
+            setDislikesButton(!dislikesButton);
+          }}
+        >
           Dislikes
         </button>
-        {dislikesButton === true && <Dislikes eventId={eventId} />}
+        {dislikesButton && <Dislikes eventId={eventId} />}
       </div>
       <div>
-        <button className="dietInfoButton" onClick={() => showListOfDietInfo()}>
+        <button
+          className="dietInfoButton"
+          onClick={() => {
+            setDietInfo(!dietInfo);
+          }}
+        >
           Diet Information
         </button>
-        {dietInfo === true && <DietInfo eventId={eventId} />}
+        {dietInfo && <DietInfo eventId={eventId} />}
       </div>
     </div>
   );

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import "../styles/ToBringList.css";
 
 const ToBring = ({ eventId }) => {
   const [participants, setParticipants] = useState([]);
@@ -18,7 +19,7 @@ const ToBring = ({ eventId }) => {
   }, [eventId]);
 
   return (
-    <div>
+    <div className="toBringList">
       {participants.map((person) => (
         <p>{person.toBring}</p>
       ))}
