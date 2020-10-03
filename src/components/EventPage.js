@@ -19,7 +19,7 @@ const EventPage = (props) => {
   const [eventAddress, setEventAddress] = useState("");
   const [hostEmail, setHostEmail] = useState("");
   const [fetchParticipants, setFetchParticipants] = useState(true);
-
+  const [participants, setParticipants] = useState([]);
   const eventLink = `https://bring-and-share-silk.vercel.app/events/${eventId}`;
   useEffect(() => {
     async function fetchData() {
@@ -32,12 +32,14 @@ const EventPage = (props) => {
           setEventDate(response.data.date);
           setEventTime(response.data.time);
           setEventAddress(response.data.address);
+       
         })
         .catch((error) => {
           console.log(error);
         });
+      
     }
-
+  
     fetchData();
   }, [eventId]);
 
@@ -63,13 +65,16 @@ const EventPage = (props) => {
           eventId={eventId}
           fetchParticipants={fetchParticipants}
           setFetchParticipants={setFetchParticipants}
+          
         />
         <AddParticipant
           eventId={eventId}
           fetchParticipants={fetchParticipants}
           setFetchParticipants={setFetchParticipants}
         />
-        <NavBar />
+        <NavBar 
+         eventId={eventId}
+        />
       </div>
     </>
   );

@@ -3,7 +3,7 @@ import axios from "axios";
 
 
 
-const DietInfo = ({eventId}) => {
+const ToBring = ({eventId}) => {
  
 const [participants, setParticipants] = useState([]);
   
@@ -17,14 +17,16 @@ const [participants, setParticipants] = useState([]);
         .catch((err) => console.log(err));
     }
 
- fetchData();
+    fetchData();
   }, [eventId]);
 
      return(
       <div>
-        {participants.map((person, index) => ( <p>{person.dietInfo}</p> ))}
+        {participants.map((person, index) => ( <p>{person.toBring}</p> ))}
       </div>
 );
 }
 
-export default DietInfo
+export default ToBring 
+
+
