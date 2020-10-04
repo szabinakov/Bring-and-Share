@@ -21,7 +21,7 @@ const DietInfo = ({ eventId }) => {
   return (
     <div className="dietInfoList">
       {participants.map((person) => (
-        <p>{person.dietInfo}</p>
+        <p className="eachItemDietInfo">{person.dietInfo}</p>
       ))}
     </div>
   );
