@@ -21,7 +21,7 @@ const Dislikes = ({ eventId }) => {
   return (
     <div className="dislikesList">
       {participants.map((person) => (
-        <p>{person.dislikes}</p>
+        <p className="eachItemDislikes">{person.dislikes}</p>
       ))}
     </div>
   );

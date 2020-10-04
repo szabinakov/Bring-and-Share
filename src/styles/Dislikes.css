@@ -1,3 +1,14 @@
 .dislikesList {
-  border: 5px solid purple;
+  background-color: rgba(255, 154, 154, 0.85);
+  border-radius: 10px;
+  padding-left: 7px;
+  padding-right: 7px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+.eachItemDislikes {
+  max-width: 200px;
+  margin: 1px;
+  overflow-wrap: break-word;
 }

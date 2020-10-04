@@ -1,3 +1,14 @@
 .dietInfoList {
-  border: 5px solid purple;
+  background-color: rgb(255, 195, 43, 0.85);
+  border-radius: 10px;
+  padding-left: 7px;
+  padding-right: 7px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  overflow-wrap: break-word;
+}
+
+.eachItemDietInfo {
+  margin: 1px;
+  overflow-wrap: break-word;
 }

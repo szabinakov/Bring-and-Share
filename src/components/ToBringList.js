@@ -21,7 +21,7 @@ const ToBring = ({ eventId }) => {
   return (
     <div className="toBringList">
       {participants.map((person) => (
-        <p>{person.toBring}</p>
+        <p className="eachItemToBring">{person.toBring}</p>
       ))}
     </div>
   );
