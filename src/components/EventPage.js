@@ -49,14 +49,15 @@ const EventPage = (props) => {
         </p>
         <div className="topHalf">
           <div className="eventDetails">
-            <h3>Event details</h3>
-            <p>Event ID: {eventId}</p>
-            <p>Event Name: {eventName}</p>
-            <p>Host Name: {hostName}</p>
-            <p>Event Date: {eventDate}</p>
-            <p>Event Time: {eventTime}</p>
-            <p>Event Address: {eventAddress}</p>
-            <p>Host Email: {hostEmail}</p>
+            <h3 className="eventDetails-Title">Event details</h3>
+            <p className="eventDetails-Details">Event ID: {eventId}</p>
+            <p className="eventDetails-Details">Host Name: {hostName}</p>
+            <p className="eventDetails-Details">Event Date: {eventDate}</p>
+            <p className="eventDetails-Details">Event Time: {eventTime}</p>
+            <p className="eventDetails-Details">
+              Event Address: {eventAddress}
+            </p>
+            <p className="eventDetails-Details">Host Email: {hostEmail}</p>
           </div>
           <div className="topHalfRight">
             <HostDetails eventId={eventId} />

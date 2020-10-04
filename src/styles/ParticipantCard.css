@@ -1,13 +1,61 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
+.eachParticipant {
+  margin: 5px;
+  width: 140px;
+  height: auto;
+  border-radius: 25px;
+  background-color: rgba(250, 175, 244, 0.85);
+  overflow-wrap: break-word;
+}
 
-.eachParticipant{
+.participantEmailInfo,
+.participantBrings,
+.participantDislikes,
+.participantDietInfo {
+  padding: 3px;
+  margin-left: 3px;
+  margin-right: 3px;
+}
+
+.participantName,
+.participantDelete {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 3px;
+}
+
+.participantName {
+  font-weight: 700;
+  color: rgb(187, 2, 141);
+  margin-top: 5px;
+}
+.participantDeleteButton {
+  font-weight: 700;
+  padding: 4px;
+  margin: 3px;
+  border-radius: 5px;
+  background-color: rgb(121, 255, 188);
+  border: none;
+  box-shadow: 2px 2px #888888;
+}
+
+/*media query start*/
+@media screen and (min-width: 410px) {
+  .eachParticipant {
     margin: 10px;
     width: 180px;
-    border: solid black;
+  }
 }
-/* participantName
-participantToBring
-participantDislikes
-participantDietInfo
-participantDelete */
+
+@media screen and (min-width: 500px) {
+  .eachParticipant {
+    margin: 12px;
+    width: 210px;
+  }
+}
+
+@media screen and (min-width: 800px) {
+}
+/*media query end*/
