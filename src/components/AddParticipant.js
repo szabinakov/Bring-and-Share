@@ -47,23 +47,28 @@ const AddParticipant = ({
 
   return (
     <>
-      <button
-        data-testid="addParticipantNavButton"
-        className="addParticipantNavButton"
-        onClick={() => showaddparticipants()}
-      >
-        Press to Add Attendees
-      </button>
+      <div className="buttonContainer">
+        <button
+          data-testid="addParticipantNavButton"
+          className="addParticipantNavButton"
+          onClick={() => showaddparticipants()}
+        >
+          Press to Add Attendees
+        </button>
+        <p className="closeX">
+          <button className="closeAddParticipantButton" onClick={closeWindow}>
+            x
+          </button>
+        </p>
+      </div>
       {addParticipantsButton === true && (
         <div className="addParticipant">
-          <p className="closeX">
-            <button onClick={closeWindow}>x</button>
-          </p>
-          <h2>Add your participants</h2>
-          <p>Fill in all fields and click "create event"</p>
-
-          {/* form starts */}
-          <form data-testid="addParticipantForm" onSubmit={handleAddPerson}>
+          <h3 className="addParticipantTitle">Add your participants</h3>
+          <form
+            data-testid="addParticipantForm"
+            className="addParticipantForm"
+            onSubmit={handleAddPerson}
+          >
             <div className="name">
               <label htmlFor="name">
                 Name <br />
@@ -126,6 +131,7 @@ const AddParticipant = ({
             <div className="dietInfo">
               <label htmlFor="dietInfo">
                 Diet info <br />
+                <p>Leave blank if you have no diet requirements</p>
                 <input
                   type="text"
                   id="dietInfo"
@@ -148,7 +154,6 @@ const AddParticipant = ({
               </button>
             </div>
           </form>
-          {/* form ends */}
         </div>
       )}
     </>

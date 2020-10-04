@@ -44,7 +44,7 @@ const NavBar = ({ eventId }) => {
             setDietInfo(!dietInfo);
           }}
         >
-          Diet Information
+          Diet Info
         </button>
         {dietInfo && <DietInfo eventId={eventId} />}
       </div>

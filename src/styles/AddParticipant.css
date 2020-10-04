@@ -1,14 +1,52 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
+.buttonContainer {
+  display: flex;
+  flex-direction: row;
+}
+
+.addParticipantNavButton {
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  color: rgb(4, 4, 4);
+  font-weight: 700;
+  background-color: rgb(250, 151, 58);
+  border: none;
+  box-shadow: 5px 5px #888888;
+}
+
+.closeX {
+  margin: 10px;
+  width: 30px;
+  text-align: center;
+}
+
+.closeAddParticipantButton {
+  background-color: orangered;
+  font-weight: 700;
+  color: white;
+  padding: 6px;
+}
+
+.addParticipantTitle {
+  font-size: 18px;
+  color: orange;
+  padding: 0px;
+  border: 2px solid magenta;
+}
+
 .addParticipant {
-  background-color: papayawhip;
-  border: 5px solid purple;
   font-family: "Roboto", sans-serif;
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
   width: 250px;
+  font-family: "Roboto", sans-serif;
+  background-color: rgba(247, 182, 77, 0.3);
+  border-radius: 15px;
 }
 
 .name,
@@ -18,10 +56,23 @@
 .dietInfo,
 .addParticipantButton {
   width: 200px;
-  padding: 10px;
+  padding: 3px;
   margin-left: auto;
   margin-right: auto;
-  border: 5px solid magenta;
+  border: 2px solid magenta;
+}
+
+#name,
+#email,
+#toBring,
+#dislikes,
+#dietInfo,
+#addParticipantButton {
+  width: 150px;
+  padding: 3px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 5px;
 }
 
 .addButton {
@@ -34,13 +85,19 @@
   box-shadow: 5px 5px #888888;
 }
 
-.addParticipantNavButton {
-  margin-bottom: 10px;
-  padding: 10px;
-  border-radius: 10px;
-  color: rgb(4, 4, 4);
-  font-weight: 700;
-  background-color: rgb(250, 151, 58);
-  border: none;
-  box-shadow: 5px 5px #888888;
+/*media query start*/
+@media screen and (min-width: 500px) {
+  .addParticipantForm {
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
 }
+
+@media screen and (min-width: 800px) {
+}
+/*media query end*/

@@ -26,9 +26,13 @@ const HostDetails = ({ eventId }) => {
     if (participants[i].email === hostEmail) {
       return (
         <div className="hostDetails" data-testid="hostdetails">
-          <h3>Host details</h3>
-          <p>Host Name: {participants[i].name}</p>
-          <p>Host email: {participants[i].email}</p>
+          <h3 className="hostDetails-Title">Host details</h3>
+          <p className="hostDetails-Details">
+            Host Name: {participants[i].name}
+          </p>
+          <p className="hostDetails-Details">
+            Host email: {participants[i].email}
+          </p>
         </div>
       );
     }

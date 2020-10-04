@@ -1,4 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
 .hostDetails {
   width: 250px;
-  border: 5px solid seagreen;
+  font-family: "Roboto", sans-serif;
+  background-color: rgba(247, 182, 77, 0.3);
+  border-radius: 15px;
+}
+
+.hostDetails-Title {
+  text-align: center;
+  margin: 5px;
+  font-size: 18px;
+}
+
+.hostDetails-Details {
+  padding-left: 5px;
+  margin: 5px;
+  font-size: 16px;
 }

@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
 .eventPage {
   display: flex;
   flex-direction: row;
@@ -10,18 +12,59 @@
   width: 100%;
   margin: 0px;
   padding: 2px;
-  color: gold;
+  color: rgb(196, 118, 0);
   text-align: center;
 }
 .topHalf {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-evenly;
   flex-wrap: wrap;
 }
 
 .eventDetails {
-  border: 5px solid yellow;
   width: 250px;
-  font-size: 15px;
+  font-family: "Roboto", sans-serif;
+  background-color: rgba(247, 182, 77, 0.3);
+  border-radius: 15px;
 }
+
+.eventDetails-Title {
+  text-align: center;
+  margin: 5px;
+  font-size: 18px;
+}
+
+.eventDetails-Details {
+  padding-left: 5px;
+  margin: 5px;
+  font-size: 16px;
+}
+
+/*media query start*/
+@media screen and (min-width: 410px) {
+  .eventDetails {
+    width: 390px;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .eventDetails {
+    min-width: 250px;
+  }
+  .eventDetails-Title {
+    font-size: 20px;
+  }
+
+  .eventDetails-Details {
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .eventDetails {
+    width: 40%;
+    max-width: 420px;
+  }
+}
+/*media query end*/

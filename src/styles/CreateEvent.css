@@ -1,31 +1,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
 .createEvent {
-  background-color: papayawhip;
   font-family: "Roboto", sans-serif;
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
   margin: 0px;
-  /* border: 5px solid green; */
 }
 
 .createEventTitle {
-  /* border: 5px solid red; */
   margin: 10px;
   font-size: 25px;
   color: rgb(255, 89, 0);
 }
 
 .createEventInstruction {
-  /* border: 5px solid purple; */
   margin: 8px;
   font-size: 20px;
-}
-
-.createEventForm {
-  /* background-color: royalblue; */
 }
 
 .eventName,
@@ -42,7 +34,6 @@
   font-weight: 700;
   font-size: 16px;
   color: rgb(201, 105, 2);
-  /* border: 5px solid red; */
 }
 
 #eventName,
@@ -66,22 +57,52 @@
   border: none;
   box-shadow: 5px 5px #888888;
 }
+
 /*media query start*/
-@media screen and (min-width: 410px) {
-}
-
 @media screen and (min-width: 500px) {
-}
-
-@media screen and (min-width: 800px) {
   .createEventForm {
-    width: 650px;
+    width: 500px;
     margin-left: auto;
     margin-right: auto;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
+  }
+
+  .eventName,
+  .hostName,
+  .date,
+  .time {
+    width: 200px;
+    padding: 7px;
+    font-size: 18px;
+  }
+  .address,
+  .hostEmail,
+  .createEventButton {
+    width: 300px;
+    padding: 7px;
+    font-size: 18px;
+  }
+
+  #eventName,
+  #hostName,
+  #date,
+  #time {
+    height: 24px;
+    width: 170px;
+  }
+  #address,
+  #hostEmail {
+    height: 24px;
+    width: 200px;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .createEventForm {
+    width: 650px;
   }
 
   .eventName,

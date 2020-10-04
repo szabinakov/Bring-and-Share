@@ -17,24 +17,26 @@ const ParticipantCard = ({
           {name}
         </div>
         <div data-testid="email" className="participantEmailInfo">
-          <a href={`mailto:${email}`}>{email}</a>
+          Email: <a href={`mailto:${email}`}>{email}</a>
         </div>
         <div data-testid="toBring" className="participantBrings">
           Brings: {toBring}
         </div>
         <div data-testid="dislikes" className="participantDislikes">
-          Does not like: {dislikes}
+          Dislikes: {dislikes}
         </div>
         <div data-testid="dietInfo" className="participantDietInfo">
-          Any other Diet information: {dietInfo}
+          Diet info: {dietInfo}
         </div>
-        <button
-          data-testid="removeButton"
-          className="participantDelete"
-          onClick={() => removeParticipant(id)}
-        >
-          Delete
-        </button>
+        <div className="participantDelete">
+          <button
+            data-testid="removeButton"
+            className="participantDeleteButton"
+            onClick={() => removeParticipant(id)}
+          >
+            Delete
+          </button>
+        </div>
       </div>
     </>
   );
