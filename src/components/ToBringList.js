@@ -20,9 +20,11 @@ const ToBring = ({ eventId }) => {
 
   return (
     <div className="toBringList">
-      {participants.map((person) => (
-        <p className="eachItemToBring">{person.toBring}</p>
-      ))}
+      <ul>
+        {participants.map((person) => (
+          <li className="eachItemToBring">{person.toBring}</li>
+        ))}
+      </ul>
     </div>
   );
 };

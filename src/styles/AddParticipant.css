@@ -1,7 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
-
-
 .buttonContainer {
   display: flex;
   flex-direction: row;
@@ -34,18 +32,29 @@
   font-size: 18px;
   color: orange;
   padding: 0px;
-  border: 2px solid magenta;
+  margin: 0px;
 }
 
 .addParticipant {
   font-family: "Roboto", sans-serif;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-evenly;
   text-align: center;
   font-family: "Roboto", sans-serif;
-  background-color: rgba(247, 182, 77, 0.3);
+  /* background-color: rgba(247, 182, 77, 0.3); */
   border-radius: 15px;
+}
+
+.addParticipantForm {
+  width: 100%;
+}
+.addParticipantFormContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  text-align: center;
 }
 
 .name,
@@ -56,9 +65,9 @@
 .addParticipantButton {
   width: 200px;
   padding: 3px;
+  margin: 3px;
   margin-left: auto;
   margin-right: auto;
-  border: 2px solid magenta;
 }
 
 #name,

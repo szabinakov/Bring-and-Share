@@ -8,7 +8,8 @@
 }
 
 .eachItemDislikes {
-  max-width: 100px;
+  max-width: 200px;
   margin: 1px;
   overflow-wrap: break-word;
+  text-align: left;
 }
