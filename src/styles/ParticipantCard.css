@@ -5,8 +5,13 @@
   width: 140px;
   height: auto;
   border-radius: 25px;
-  background-color: rgba(250, 175, 244, 0.85);
+  background-color: rgba(250, 153, 242, 0.85);
   overflow-wrap: break-word;
+}
+
+.sectionPC {
+  color: rgb(125, 0, 136);
+  font-weight: 700;
 }
 
 .participantEmailInfo,
@@ -16,6 +21,8 @@
   padding: 3px;
   margin-left: 3px;
   margin-right: 3px;
+  font-size: 12px;
+  color: white;
 }
 
 .participantName,
@@ -24,6 +31,7 @@
   margin-left: auto;
   margin-right: auto;
   padding: 3px;
+  font-size: 15px;
 }
 
 .participantName {
@@ -53,6 +61,17 @@
   .eachParticipant {
     margin: 12px;
     width: 210px;
+  }
+  .participantEmailInfo,
+  .participantBrings,
+  .participantDislikes,
+  .participantDietInfo {
+    font-size: 15px;
+  }
+
+  .participantName,
+  .participantDelete {
+    font-size: 18px;
   }
 }
 

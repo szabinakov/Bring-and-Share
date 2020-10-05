@@ -1,12 +1,8 @@
-.containerNav {
-  display: flex;
-  justify-content: center;
-}
 .navbarContainer {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   margin-top: 50px;
-  width: 320px;
+  width: 100%;
 }
 
 .toBringButton,

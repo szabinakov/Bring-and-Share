@@ -14,7 +14,6 @@ const NavBar = ({ eventId }) => {
   // };
 
   return (
-    <div className="containerNav">
     <div className="navbarContainer">
       <div>
         <button
@@ -49,7 +48,6 @@ const NavBar = ({ eventId }) => {
         </button>
         {dietInfo && <DietInfo eventId={eventId} />}
       </div>
-    </div>
     </div>
   );
 };

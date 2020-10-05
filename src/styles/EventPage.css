@@ -16,10 +16,19 @@
   text-align: center;
 }
 .topHalf {
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 20px;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   flex-wrap: wrap;
+  background-color: rgb(255, 255, 255, 0.8);
+}
+
+.topHalfRight {
+  background-color: green;
 }
 
 .eventDetails {
@@ -49,9 +58,14 @@
 }
 
 @media screen and (min-width: 500px) {
+  .topHalf {
+    width: 85%;
+  }
+
   .eventDetails {
     min-width: 250px;
   }
+
   .eventDetails-Title {
     font-size: 20px;
   }
@@ -62,6 +76,9 @@
 }
 
 @media screen and (min-width: 800px) {
+  .topHalf {
+    width: 80%;
+  }
   .eventDetails {
     width: 40%;
     max-width: 420px;

@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
 .hostDetails {
-  width: 250px;
+  width: 100%;
   font-family: "Roboto", sans-serif;
   background-color: rgba(247, 182, 77, 0.3);
   border-radius: 15px;
@@ -18,3 +18,21 @@
   margin: 5px;
   font-size: 16px;
 }
+
+/*media query start*/
+@media screen and (min-width: 410px) {
+  .eachParticipant {
+    margin: 10px;
+    width: 180px;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .hostDetails {
+    /* width: 40%; */
+  }
+}
+
+@media screen and (min-width: 800px) {
+}
+/*media query end*/

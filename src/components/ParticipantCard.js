@@ -17,16 +17,17 @@ const ParticipantCard = ({
           {name}
         </div>
         <div data-testid="email" className="participantEmailInfo">
-          Email: <a href={`mailto:${email}`}>{email}</a>
+          <b className="sectionPC">Email:</b>{" "}
+          <a href={`mailto:${email}`}>{email}</a>
         </div>
         <div data-testid="toBring" className="participantBrings">
-          Brings: {toBring}
+          <b className="sectionPC">Brings:</b> {toBring}
         </div>
         <div data-testid="dislikes" className="participantDislikes">
-          Dislikes: {dislikes}
+          <b className="sectionPC">Dislikes:</b> {dislikes}
         </div>
         <div data-testid="dietInfo" className="participantDietInfo">
-          Diet info: {dietInfo}
+          <b className="sectionPC">Diet info:</b> {dietInfo}
         </div>
         <div className="participantDelete">
           <button
