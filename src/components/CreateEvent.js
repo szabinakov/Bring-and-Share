@@ -90,7 +90,7 @@ const CreateEvent = () => {
             />
           </label>
         </div>
-
+        
         <div className="date">
           <label htmlFor="date">
             Date <br />
