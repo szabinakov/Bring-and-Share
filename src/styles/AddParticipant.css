@@ -1,16 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
 
+
 .buttonContainer {
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  margin: 10px;
 }
-
+.leaveBlankP {
+  font-size: 10px;
+  padding: 0%;
+  margin: 0%;
+}
 .addParticipantNavButton {
   margin-bottom: 10px;
   padding: 10px;
   border-radius: 10px;
-  text-align: center;
   color: rgb(4, 4, 4);
   font-weight: 700;
   background-color: rgb(250, 151, 58);
@@ -19,16 +25,9 @@
 }
 
 .closeX {
-  margin: 10px;
-  width: 30px;
-  text-align: center;
-}
-
-.closeAddParticipantButton {
-  background-color: orangered;
+  text-align: end;
   font-weight: 700;
-  color: white;
-  padding: 6px;
+  margin: 0%;
 }
 
 .addParticipantTitle {
@@ -44,7 +43,6 @@
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  width: 250px;
   font-family: "Roboto", sans-serif;
   background-color: rgba(247, 182, 77, 0.3);
   border-radius: 15px;
@@ -88,7 +86,7 @@
 
 /*media query start*/
 @media screen and (min-width: 500px) {
-  .addParticipantForm {
+  .addParticipant {
     width: 500px;
     margin-left: auto;
     margin-right: auto;
