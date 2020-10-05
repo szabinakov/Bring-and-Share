@@ -47,6 +47,7 @@ const AddParticipant = ({
 
   return (
     <>
+    <div className="theContainerforAddP">
       <div className="buttonContainer">
         <button
           data-testid="addParticipantNavButton"
@@ -55,20 +56,20 @@ const AddParticipant = ({
         >
           Press to Add Attendees
         </button>
-        <p className="closeX">
-          <button className="closeAddParticipantButton" onClick={closeWindow}>
-            x
-          </button>
-        </p>
       </div>
       {addParticipantsButton === true && (
         <div className="addParticipant">
-          <h3 className="addParticipantTitle">Add your participants</h3>
           <form
             data-testid="addParticipantForm"
             className="addParticipantForm"
             onSubmit={handleAddPerson}
           >
+            <p className="closeX">
+          <button className="closeAddParticipantButton" onClick={closeWindow}>
+            x
+          </button>
+          </p>
+              <h3 className="addParticipantTitle">Add your participants</h3>
             <div className="name">
               <label htmlFor="name">
                 Name <br />
@@ -131,7 +132,7 @@ const AddParticipant = ({
             <div className="dietInfo">
               <label htmlFor="dietInfo">
                 Diet info <br />
-                <p>Leave blank if you have no diet requirements</p>
+                <p className="leaveBlankP">Leave blank if you have no diet requirements</p>
                 <input
                   type="text"
                   id="dietInfo"
@@ -139,7 +140,7 @@ const AddParticipant = ({
                   data-testid="dietInfo"
                   value={fields.dietInfo}
                   onChange={handleFieldChange}
-                  placeholder="Vegetarian? Kosher? Coeliac?"
+                  placeholder="Vegetarian? Coeliac?"
                 />
               </label>
             </div>
@@ -156,6 +157,7 @@ const AddParticipant = ({
           </form>
         </div>
       )}
+      </div>
     </>
   );
 };

@@ -4,7 +4,7 @@
 }
 .navbarContainer {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   margin-top: 50px;
   width: 350px;
 }
@@ -20,32 +20,5 @@
   background-color: rgb(250, 151, 58);
   border: none;
   box-shadow: 5px 5px #888888;
-  width: 80px;
+  align-content: center;
 }
-
-/*media query start*/
-@media screen and (min-width: 410px) {
-  .toBringButton,
-  .dislikeButton,
-  .dietInfoButton {
-    width: 100px;
-  }
-}
-
-@media screen and (min-width: 500px) {
-  .toBringButton,
-  .dislikeButton,
-  .dietInfoButton {
-    padding: 10px;
-    width: 122px;
-  }
-}
-
-@media screen and (min-width: 800px) {
-  .toBringButton,
-  .dislikeButton,
-  .dietInfoButton {
-    width: 160px;
-  }
-}
-/*media query end*/
