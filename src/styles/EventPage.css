@@ -23,7 +23,7 @@
 }
 
 .eventDetails {
-  width: 250px;
+  text-align: center;
   font-family: "Roboto", sans-serif;
   background-color: rgba(247, 182, 77, 0.3);
   border-radius: 15px;
