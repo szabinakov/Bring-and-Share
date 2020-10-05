@@ -61,12 +61,12 @@ const EventPage = (props) => {
           </div>
           <div className="topHalfRight">
             <HostDetails eventId={eventId} />
-            <AddParticipant
-              eventId={eventId}
-              fetchParticipants={fetchParticipants}
-              setFetchParticipants={setFetchParticipants}
-            />
           </div>
+          <AddParticipant
+            eventId={eventId}
+            fetchParticipants={fetchParticipants}
+            setFetchParticipants={setFetchParticipants}
+          />
         </div>
         <NavBar eventId={eventId} />
         <Participants

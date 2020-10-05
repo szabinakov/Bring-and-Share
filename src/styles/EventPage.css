@@ -28,13 +28,13 @@
 }
 
 .topHalfRight {
-  background-color: green;
+  /* background-color: green; */
 }
 
 .eventDetails {
   text-align: center;
   font-family: "Roboto", sans-serif;
-  background-color: rgba(247, 182, 77, 0.3);
+  /* background-color: rgba(247, 182, 77, 0.3); */
   border-radius: 15px;
 }
 

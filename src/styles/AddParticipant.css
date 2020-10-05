@@ -42,12 +42,19 @@
   justify-content: space-evenly;
   text-align: center;
   font-family: "Roboto", sans-serif;
-  background-color: rgba(247, 182, 77, 0.3);
+  /* background-color: rgba(247, 182, 77, 0.3); */
   border-radius: 15px;
 }
 
 .addParticipantForm {
   width: 100%;
+}
+.addParticipantFormContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  text-align: center;
 }
 
 .name,
