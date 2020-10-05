@@ -87,7 +87,6 @@
 /*media query start*/
 @media screen and (min-width: 500px) {
   .addParticipant {
-    width: 500px;
     margin-left: auto;
     margin-right: auto;
     display: flex;
