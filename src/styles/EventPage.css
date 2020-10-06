@@ -27,12 +27,8 @@
   background-color: rgb(255, 255, 255, 0.8);
 }
 
-.topHalfRight {
-  /* background-color: green; */
-}
-
 .eventDetails {
-  text-align: center;
+  text-align: left;
   font-family: "Roboto", sans-serif;
   /* background-color: rgba(247, 182, 77, 0.3); */
   border-radius: 15px;
@@ -42,12 +38,17 @@
   text-align: center;
   margin: 5px;
   font-size: 18px;
+  color: rgb(245, 97, 43);
 }
 
 .eventDetails-Details {
   padding-left: 5px;
   margin: 5px;
   font-size: 16px;
+}
+
+.sectionEd {
+  color: rgb(255, 132, 0);
 }
 
 /*media query start*/
