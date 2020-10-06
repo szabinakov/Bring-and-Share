@@ -28,10 +28,10 @@ const HostDetails = ({ eventId }) => {
         <div className="hostDetails" data-testid="hostdetails">
           <h3 className="hostDetails-Title">Host details</h3>
           <p className="hostDetails-Details">
-            Host Name: {participants[i].name}
+            <b className="sectionHd">Host Name:</b> {participants[i].name}
           </p>
           <p className="hostDetails-Details">
-            Host email: {participants[i].email}
+            <b className="sectionHd">Host email:</b> {participants[i].email}
           </p>
         </div>
       );

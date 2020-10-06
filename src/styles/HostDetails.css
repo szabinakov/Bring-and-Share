@@ -11,12 +11,17 @@
   text-align: center;
   margin: 5px;
   font-size: 18px;
+  color: rgb(0, 186, 176);
 }
 
 .hostDetails-Details {
   padding-left: 5px;
   margin: 5px;
   font-size: 16px;
+}
+
+.sectionHd {
+  color: rgb(1, 136, 167);
 }
 
 /*media query start*/
@@ -28,9 +33,6 @@
 }
 
 @media screen and (min-width: 500px) {
-  .hostDetails {
-    /* width: 40%; */
-  }
 }
 
 @media screen and (min-width: 800px) {
