@@ -84,7 +84,7 @@ const AddParticipant = ({
                       data-testid="name"
                       value={fields.name}
                       onChange={handleFieldChange}
-                      placeholder="Name of fellow Party Queen..."
+                      placeholder="Your name"
                     />
                   </label>
                 </div>
@@ -99,7 +99,7 @@ const AddParticipant = ({
                       data-testid="email"
                       value={fields.email}
                       onChange={handleFieldChange}
-                      placeholder="Name of fellow Party Queen..."
+                      placeholder="youremail@email.com"
                     />
                   </label>
                 </div>
@@ -121,7 +121,7 @@ const AddParticipant = ({
 
                 <div className="dislikes">
                   <label htmlFor="dislikes">
-                    I don't like... <br />
+                    Food dislikes <br />
                     <input
                       type="text"
                       id="dislikes"
@@ -129,6 +129,7 @@ const AddParticipant = ({
                       data-testid="dislikes"
                       value={fields.dislikes}
                       onChange={handleFieldChange}
+                      placeholder="I don't like..."
                     />
                   </label>
                 </div>
@@ -146,7 +147,7 @@ const AddParticipant = ({
                       data-testid="dietInfo"
                       value={fields.dietInfo}
                       onChange={handleFieldChange}
-                      placeholder="Vegetarian? Coeliac?"
+                      placeholder="Any food restrictions?"
                     />
                   </label>
                 </div>
