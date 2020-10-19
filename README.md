@@ -10,3 +10,20 @@ With the app you are able to:
 * React
 * CSS
 * Javascript
+
+## How to run the app
+Clone the repository
+`git clone https://github.com/szabinakov/Bring-and-Share.git`
+Install node modules
+`npm i`
+Start the app
+`npm start`
+
+## Authors
+* [Arianha Bayley](https://github.com/ari-anha)
+* [Evelyn Rees](https://github.com/EveRefi)
+* Szabina Kovacs
+
+## If we have more time
+* Add user authentification, allowing people to create profiles
+* Adding chat functionality 
